@@ -9,10 +9,17 @@ should be bigger than a paragraph, but smaller than a book chapter.
 Your website must:
 
 - [ ] have at least 3 pages with meaningful content
+  - Interactieve Informatica Informatie Pagina
+  - About Us
+  - Gebouwen van de Uni
 - [ ] use HTML5 semantic elements for formatting
 - [ ] use images
 - [ ] have links between pages, within pages, and to external page(s)
+  - navbar
+  - about us in het verhaaltje
+  - info pagina
 - [ ] have at least one table (not used for formatting a webpage layout)
+  - gebouwen
 - [ ] be optimised for search engines
 - [ ] use consistent layout and colour scheme
 - [ ] use CSS for formatting, including at least:
