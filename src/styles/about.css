@@ -1,6 +1,8 @@
 body{
+    padding-left: 150px;
+    padding-right: 150px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
+    margin: 0px;
 }
 
 nav{
@@ -37,8 +39,19 @@ nav > ul> li > .button{
     cursor: pointer;
 }
 
+article{
+    margin: 10px;
+}
+
+aside{
+    float:right;
+}
+
 img {
     max-width: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
 }
 
 h1 {
@@ -49,7 +62,19 @@ h2 {
     font-size: 30px;
 }
 
+p {
+    
+}
+
+aside{
+    margin: 10px;
+}
+
 footer{
     background-color: grey;
     padding: 10px;
+}
+footer > p{
+    margin-left: 50px;
+    margin-right: 50px;
 }
