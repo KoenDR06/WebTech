@@ -1,0 +1,21 @@
+nav {
+    background-color: grey;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.nav-link {
+    width: 180px;
+    height: 25px;
+    background-color: lightblue;
+    border: solid 2px black;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
