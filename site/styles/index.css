@@ -5,6 +5,10 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* --- Aside --- */
 aside {
     float: right;
