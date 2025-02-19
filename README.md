@@ -8,13 +8,13 @@ should be bigger than a paragraph, but smaller than a book chapter.
 # Requirements
 Your website must:
 
-- [ ] use HTML5 semantic elements for formatting
-- [ ] have links between pages, within pages, and to external page(s)
+- [X] use HTML5 semantic elements for formatting
+- [X] have links between pages, within pages, and to external page(s)
   - navbar
   - about us in het verhaaltje
   - info pagina
 - [ ] be optimised for search engines
-- [ ] use consistent layout and colour scheme
+- [X] use consistent layout and colour scheme
 - [ ] use CSS for formatting, including at least:
   - [ ] several different styles for links
   - [ ] several different styles for text
