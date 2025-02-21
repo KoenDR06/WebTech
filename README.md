@@ -12,23 +12,26 @@ should be bigger than a paragraph, but smaller than a book chapter.
   - [ ] Keyboard compatibility
   - [ ] Text to speech
   - [ ] Clear layout and design
+- [ ] Site header
 
 ## Kitty
 - [ ] Customizable text
   - [ ] Understandable content
+- [ ] Building page
 
 ## Koen
 - [ ] be optimised for search engines
-
-# Requirements
-Your website must:
-
+- [ ] footer
 - [ ] use CSS for formatting, including at least:
   - [ ] cascading styles through selector specificity
   - [X] several different styles for links
   - [X] several different styles for text
   - [X] styles for table elements
   - [X] style inheritance
+
+# Requirements
+Your website must:
+
 - [ ] be compliant with the HTML5 rules of [W3C Markup Validation Service](https://validator.w3.org) and the CSS3 rules of
     [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator)
 - [ ] render correctly in the current versions of Chrome and Firefox browsers
