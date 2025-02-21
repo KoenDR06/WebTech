@@ -1,75 +1,107 @@
-body{
+body {
     margin:0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-article{
-    padding:10px;
-}
-@media only screen and (min-width: 1000px) {
-body {
-    padding-left: 10%;
-    padding-right: 10%;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+
+header {
+    margin-top: 0px;
+    height: 69px;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* --- Aside --- */
-aside {
-    float: right;
-    margin-top: 10px;
-    position: sticky;
-    top: 100px;
-}
-
-.content-table, .content-table td, .content-table th {
-    border: 1px solid black;
-}
-
-.header-link {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bolder;
+header > p {
+    margin:0px;
+    padding: 10px;
 }
 
 article {
-    margin: 10px;
+    padding:10px;
 }
 
 .profile-picture {
-    max-width: 300px;
     border: solid 2px black;
+    width: 200px;
+    height: 200px;
 }
 
-h1 {
-    font-size: 40px;
+.team-member-text > p {
+    padding-bottom: 10px;
 }
 
-h2 {
-    font-size: 30px;
+@media only screen and (min-width: 700px){
+    .team-member-section {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    p {
+        margin-top: 0px;
+    }
 }
 
-.scroll-target {
-    scroll-margin: 75px;
+@media only screen and (min-width: 1000px) {
+    body {
+        padding-left: 15%;
+        padding-right: 15%;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* --- Aside --- */
+    aside {
+        float: right;
+        margin-top: 10px;
+        position: sticky;
+        top: 100px;
+    }
+
+    .content-table, .content-table td, .content-table th {
+        border: 1px solid black;
+    }
+
+    .header-link {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bolder;
+    }
+
+    article {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .scroll-target {
+        scroll-margin: 75px;
+    }
+
+    .opening-hours-table th {
+        text-align: right;
+    }
+
+    .opening-hours-table th[colspan="2"] {
+        text-align: left;
+    }
+
+    .team-member-section p {
+        margin: 0 10px 0 0;
+        /* width: 50%; */
+    }
 }
 
-.opening-hours-table th {
-    text-align: right;
-}
-
-.opening-hours-table th[colspan="2"] {
-    text-align: left;
-}
-
-.team-member-section {
-    display: flex;
-}
-
-.team-member-section p {
-    margin: 0 0 0 10px;
-    width: 50%;
-}
+@media only screen and (min-width: 1000px){
+    body {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
 }
