@@ -68,8 +68,9 @@ h2 {
     display: flex;
 }
 
-.team-member-section p {
+.about-member-text {
     margin: 0 0 0 10px;
     width: 50%;
+
 }
 }
