@@ -5,37 +5,40 @@ appeal of your design is highly welcomed but no strict requirements are specifie
 color combinations. Your website  is expected to present meaningful information about the members of the group. The pages
 should be bigger than a paragraph, but smaller than a book chapter.
 
-# Requirements
-Your website must:
+# Takenverdeling
 
-- [X] use HTML5 semantic elements for formatting
-- [X] have links between pages, within pages, and to external page(s)
-  - navbar
-  - about us in het verhaaltje
-  - info pagina
-- [ ] be optimised for search engines
-- [X] use consistent layout and colour scheme
-- [ ] use CSS for formatting, including at least:
-  - [ ] several different styles for links
-  - [ ] several different styles for text
-  - [ ] styles for table elements
-  - [ ] cascading styles through selector spesificity
-  - [ ] style inheritance
-- [ ] define all formatting styles in a separate CSS file
-- [ ] be compliant with the HTML5 rules of [W3C Markup Validation Service](https://validator.w3.org) and the CSS3 rules of
-    [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator)
-- [ ] not use any of the deprecated HTML elements or attributes (see for example [here](https://www.w3schools.com/tags/))
-- [ ] render correctly in the current versions of Chrome and Firefox browsers
+## Bas
 - [ ] follow the Web accessibility standard on
   - [ ] Keyboard compatibility
   - [ ] Text to speech
   - [ ] Clear layout and design
+
+## Kitty
 - [ ] Customizable text
   - [ ] Understandable content
+
+## Koen
+- [ ] be optimised for search engines
+
+# Requirements
+Your website must:
+
+- [ ] use CSS for formatting, including at least:
+  - [ ] cascading styles through selector specificity
+  - [X] several different styles for links
+  - [X] several different styles for text
+  - [X] styles for table elements
+  - [X] style inheritance
+- [ ] be compliant with the HTML5 rules of [W3C Markup Validation Service](https://validator.w3.org) and the CSS3 rules of
+    [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator)
+- [ ] render correctly in the current versions of Chrome and Firefox browsers
 - [ ] follow the responsive Web design guidelines for
   - [ ] images
   - [ ] content positioning
   - [ ] units of measurement
+- [X] not use any of the deprecated HTML elements or attributes (see for example [here](https://www.w3schools.com/tags/))
+- [X] define all formatting styles in a separate CSS file
+- [X] use consistent layout and colour scheme
 - [X] have at least 3 pages with meaningful content
   - Interactieve Informatica Informatie Pagina
   - About Us
@@ -43,6 +46,11 @@ Your website must:
 - [X] use images
 - [X] have at least one table (not used for formatting a webpage layout)
   - gebouwen
+- [X] use HTML5 semantic elements for formatting
+- [X] have links between pages, within pages, and to external page(s)
+  - navbar
+  - about us in het verhaaltje
+  - info pagina
 
 # Maintain good coding style
 - [ ] use indentation for nested HTML elements

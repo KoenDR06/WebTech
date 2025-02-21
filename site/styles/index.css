@@ -55,8 +55,12 @@ article {
     aside {
         float: right;
         margin-top: 10px;
-        position: sticky;
+        position: fixed; /*  sticky  */
+        right: 10%;
         top: 100px;
+        margin-bottom: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .content-table, .content-table td, .content-table th {
@@ -88,18 +92,37 @@ article {
     .opening-hours-table th {
         text-align: right;
     }
-
+    
     .opening-hours-table th[colspan="2"] {
         text-align: left;
     }
-
-    .team-member-section p {
-        margin: 0 10px 0 0;
-        /* width: 50%; */
+    
+    .team-member-section {
+        display: flex;
     }
-}
+    
+    .about-member-text {
+        margin: 0 0 0 10px;
+        width: 50%;
+    
+    }
+    
+    .scrollable-table{
+        max-width: 100%;
+        max-height: 570px;
+        overflow: auto;
+        display: block;
+    }
+    }
+    
+    @media only screen and (max-width: 990px) {
+        aside{
+            display: none;
+        }
+    }
 
-@media only screen and (min-width: 1000px){
+
+@media only screen and (min-width: 1200px){
     body {
         padding-left: 20%;
         padding-right: 20%;
