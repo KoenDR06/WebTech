@@ -1,10 +1,6 @@
 body {
     margin:0px;
     font-family: Arial, Helvetica, sans-serif;
-    /*min-width: 40vw;*/
-    /*min-height: 40vh;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
 }
 
 header {
@@ -31,7 +27,7 @@ article {
     padding-bottom: 10px;
 }
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 500px){
     body{
         min-width: 40vw;
         min-height: 40vh;
@@ -58,8 +54,6 @@ article {
         padding-right: 15%;
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
-        /*min-width: 40vw;*/
-        /*min-height: 40vh;*/
     }
 
     html {
@@ -72,14 +66,14 @@ article {
         margin-top: 10px;
         position: fixed; /*  sticky  */
         right: 15%;
-        top: 100px;
+        top: 15vh;
         margin-bottom: 100vh;
         overflow-x: hidden;
     }
 
     .scrollable-table{
         max-width: 100%;
-        max-height: 570px;
+        max-height: 50vh;/*570px;*/
         display: block;
     }
 
@@ -131,7 +125,6 @@ article {
     .about-member-text {
         margin: 0 10px 0 10px;
         width: 80%;
-
     }
 }
 
