@@ -47,11 +47,9 @@ article {
         margin-top: 0px;
     }
 
-    /*.scrollable-table{*/
-    /*    max-width: 100%;*/
-    /*    max-height: 570px;*/
-    /*    display: block;*/
-    /*}*/
+    .content-table, .content-table td, .content-table th {
+        border: 1px solid black;
+    }
 }
 
 @media only screen and (min-width: 1000px){
