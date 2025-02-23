@@ -28,11 +28,6 @@ article {
 }
 
 @media only screen and (min-width: 500px){
-    body{
-        min-width: 40vw;
-        min-height: 40vh;
-    }
-
     .team-member-section {
         display: flex;
         justify-content: space-between;
@@ -48,7 +43,7 @@ article {
     }
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1000px)and (min-height: 500px){
     body {
         padding-left: 15%;
         padding-right: 15%;
