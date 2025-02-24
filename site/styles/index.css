@@ -1,10 +1,10 @@
 body {
-    margin:0px;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    margin-top: 0px;
+    margin-top: 0;
     width: 100%;
     padding: 10px;
     background-color: lightblue;
@@ -12,7 +12,7 @@ header {
 }
 
 header > p {
-    margin: 0px;
+    margin: 0;
     margin-left: 50px;
     padding-top: 10px;
     font-size: 25px;
@@ -38,7 +38,7 @@ article {
     padding-bottom: 10px;
 }
 
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 500px) {
     .team-member-section {
         display: flex;
         justify-content: space-between;
@@ -59,7 +59,7 @@ article {
     }
 }
 
-@media only screen and (min-width: 1000px)and (min-height: 500px){
+@media only screen and (min-width: 1000px)and (min-height: 500px) {
     body {
         padding-left: 15%;
         padding-right: 15%;
@@ -82,7 +82,7 @@ article {
         overflow-x: hidden;
     }
 
-    .scrollable-table{
+    .scrollable-table {
         max-width: 100%;
         max-height: 50vh;/*570px;*/
         display: block;
@@ -124,15 +124,11 @@ article {
         text-align: right;
     }
 
-    .opening-hours-table th[colspan="2"] {
-        text-align: left;
-    }
-
     .team-member-section {
         display: flex;
     }
 
-    .scrollable-table{
+    .scrollable-table {
         max-width: 100%;
         max-height: 570px;
         overflow: auto;
@@ -143,16 +139,16 @@ article {
         margin: 0 10px 0 10px;
         width: 80%;
     }
-    
+
     }
-    
+
     @media only screen and (max-width: 990px) {
-        aside{
+        aside {
             display: none;
         }
     }
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1200px) {
     body {
         padding-left: 20%;
         padding-right: 20%;
