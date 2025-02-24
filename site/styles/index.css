@@ -27,7 +27,7 @@ article {
     padding-bottom: 10px;
 }
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 500px){
     .team-member-section {
         display: flex;
         justify-content: space-between;
@@ -42,9 +42,13 @@ article {
     p {
         margin-top: 0px;
     }
+
+    .content-table, .content-table td, .content-table th {
+        border: 1px solid black;
+    }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px)and (min-height: 500px){
     body {
         padding-left: 15%;
         padding-right: 15%;
@@ -61,11 +65,16 @@ article {
         float: right;
         margin-top: 10px;
         position: fixed; /*  sticky  */
-        right: 10%;
-        top: 100px;
+        right: 15%;
+        top: 15vh;
         margin-bottom: 100vh;
-        overflow-y: auto;
         overflow-x: hidden;
+    }
+
+    .scrollable-table{
+        max-width: 100%;
+        max-height: 50vh;/*570px;*/
+        display: block;
     }
 
     .content-table, .content-table td, .content-table th {
@@ -80,6 +89,12 @@ article {
 
     article {
         margin: 10px;
+        word-wrap: break-word;
+    }
+
+    .profile-picture {
+        max-width: 300px;
+        border: solid 2px black;
     }
 
     h1 {
@@ -97,21 +112,27 @@ article {
     .opening-hours-table th {
         text-align: right;
     }
-    
+
     .opening-hours-table th[colspan="2"] {
         text-align: left;
     }
-    
+
     .team-member-section {
         display: flex;
     }
-    
+
     .scrollable-table{
         max-width: 100%;
         max-height: 570px;
         overflow: auto;
         display: block;
     }
+
+    .about-member-text {
+        margin: 0 10px 0 10px;
+        width: 80%;
+    }
+    
     }
     
     @media only screen and (max-width: 990px) {
@@ -119,7 +140,6 @@ article {
             display: none;
         }
     }
-
 
 @media only screen and (min-width: 1200px){
     body {
