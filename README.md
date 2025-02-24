@@ -12,7 +12,7 @@ should be bigger than a paragraph, but smaller than a book chapter.
   - [ ] Keyboard compatibility
   - [ ] Text to speech
   - [ ] Clear layout and design
-- [ ] Site header
+- [X] Site header
 
 ## Kitty
 - [ ] Customizable text

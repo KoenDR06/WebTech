@@ -5,12 +5,23 @@ body {
 
 header {
     margin-top: 0px;
-    height: 69px;
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
+    display: flex;
 }
 
 header > p {
-    margin:0px;
-    padding: 10px;
+    margin: 0px;
+    margin-left: 50px;
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header-picture {
+    max-height: 49px;
+    width:auto;
 }
 
 article {
