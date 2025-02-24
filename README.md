@@ -21,9 +21,9 @@ should be bigger than a paragraph, but smaller than a book chapter.
 
 ## Koen
 - [ ] be optimised for search engines
-- [ ] footer
-- [ ] use CSS for formatting, including at least:
-  - [ ] cascading styles through selector specificity
+- [X] footer
+- [X] use CSS for formatting, including at least:
+  - [X] cascading styles through selector specificity
   - [X] several different styles for links
   - [X] several different styles for text
   - [X] styles for table elements
