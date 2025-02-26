@@ -9,9 +9,9 @@ should be bigger than a paragraph, but smaller than a book chapter.
 
 ## Bas
 - [ ] follow the Web accessibility standard on
-  - [ ] Keyboard compatibility
+  - [X] Keyboard compatibility
   - [ ] Text to speech
-  - [ ] Clear layout and design
+  - [X] Clear layout and design
 - [X] Site header
 
 ## Kitty
