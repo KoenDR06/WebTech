@@ -3,109 +3,28 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    margin-top: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: lightblue;
-    display: flex;
-}
-
-header > p {
-    margin: 0;
-    margin-left: 50px;
-    padding-top: 10px;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.header-picture {
-    max-height: 49px;
-    width:auto;
-}
-
 article {
-    padding:10px;
+    padding: 10px;
+    margin: 10px;
+    word-wrap: break-word;
 }
 
-.profile-picture {
-    border: solid 2px black;
-    width: 200px;
-    height: 200px;
+html {
+    scroll-behavior: smooth;
 }
 
-.team-member-text > p {
-    padding-bottom: 10px;
+p {
+    margin-top: 0;
 }
 
-@media only screen and (min-width: 500px) {
-    .team-member-section {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-    }
-
-    .about-member-text {
-        margin: 0 10px 0 10px;
-        width: 80%;
-    }
-
-    p {
-        margin-top: 0;
-    }
-
-    .content-table, .content-table td, .content-table th {
-        border: 1px solid black;
-    }
+.scroll-target {
+    scroll-margin: 75px;
 }
 
-@media only screen and (min-width: 1000px)and (min-height: 500px) {
+@media only screen and (min-width: 1000px) and (min-height: 500px) {
     body {
         padding-left: 15%;
         padding-right: 15%;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    /* --- Aside --- */
-    aside {
-        float: right;
-        margin-top: 10px;
-        position: fixed; /*  sticky  */
-        right: 15%;
-        top: 15vh;
-        margin-bottom: 100vh;
-        overflow-x: hidden;
-    }
-
-    .scrollable-table {
-        max-width: 100%;
-        max-height: 50vh;/*570px;*/
-        display: block;
-    }
-
-    .content-table, .content-table td, .content-table th {
-        border: 1px solid black;
-    }
-
-    .header-link {
-        text-decoration: none;
-        color: inherit;
-        font-weight: bolder;
-    }
-
-    article {
-        margin: 10px;
-        word-wrap: break-word;
-    }
-
-    .profile-picture {
-        max-width: 300px;
-        border: solid 2px black;
     }
 
     h1 {
@@ -114,30 +33,6 @@ article {
 
     h2 {
         font-size: 30px;
-    }
-
-    .scroll-target {
-        scroll-margin: 75px;
-    }
-
-    .opening-hours-table th {
-        text-align: right;
-    }
-
-    .team-member-section {
-        display: flex;
-    }
-
-    .scrollable-table {
-        max-width: 100%;
-        max-height: 570px;
-        overflow: auto;
-        display: block;
-    }
-
-    .about-member-text {
-        margin: 0 10px 0 10px;
-        width: 80%;
     }
 }
 

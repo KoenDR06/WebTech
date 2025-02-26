@@ -1,123 +1,39 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+@media only screen and (min-width: 1000px) and (min-height: 500px) {
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    aside {
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .scrollable-table {
+        max-height: 80vh;
+        overflow: auto;
+        position: sticky;
+        top: 85px;
+    }
 }
 
-article {
-    padding:10px;
+@media only screen and (max-width: 1000px) {
+    aside {
+        margin: 20px;
+    }
 }
 
 .content-table, .content-table td, .content-table th {
     border: 1px solid black;
 }
 
-@media only screen and (min-width: 400px){
-    p {
-        margin-top: 0;
-    }
-
-    .content-table {
-        margin: 5px;
-    }
-
-    .header-link {
-        text-decoration: none;
-        color: inherit;
-        font-weight: bolder;
-    }
+.header-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bolder;
 }
 
-@media only screen and (min-width: 1000px)and (min-height: 500px){
-    body {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    /* --- Aside --- */
-    aside {
-        float: right;
-        margin-top: 10px;
-        position: fixed; /*  sticky  */
-        right: 15%;
-        top: calc(100% - 73%);/*20vh;*/
-        margin-bottom: 100vh;
-        overflow-x: hidden;
-    }
-
-    .scrollable-table{
-        max-width: 100%;
-        max-height: 58vh;/*570px;*/
-        display: block;
-    }
-
-    .content-table {
-        margin: 0;
-    }
-
-    article {
-        margin: 10px;
-        max-width: calc(100% - 60%);
-        word-wrap: break-word;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
-
-    .scroll-target {
-        scroll-margin: 75px;
-    }
-
-    .opening-hours-table th {
-        text-align: right;
-    }
-
-    .opening-hours-table th[colspan="2"] {
-        text-align: left;
-    }
-}
-
-@media only screen and (min-width: 1000px)and (min-height: 600px){
-    aside {
-        float: right;
-        margin-top: 10px;
-        position: fixed; /*  sticky  */
-        right: 15%;
-        top: calc(100% - 78%);/*20vh;*/
-        margin-bottom: 100vh;
-        overflow-x: hidden;
-    }
-
-    .scrollable-table{
-        max-width: 100%;
-        max-height: 60vh;/*570px;*/
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 1000px)and (min-height: 700px){
-    aside {
-        float: right;
-        margin-top: 10px;
-        position: fixed; /*  sticky  */
-        right: 15%;
-        top: calc(100% - 81%);/*20vh;*/
-        margin-bottom: 100vh;
-        overflow-x: hidden;
-    }
-}
-
-@media only screen and (min-width: 1200px){
-    body {
-        padding-left: 20%;
-        padding-right: 20%;
-    }
+.opening-hours-table th {
+    text-align: right;
 }
