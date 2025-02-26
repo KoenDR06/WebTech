@@ -15,12 +15,12 @@ should be bigger than a paragraph, but smaller than a book chapter.
 - [X] Site header
 
 ## Kitty
-- [ ] Customizable text
-  - [ ] Understandable content
-- [ ] Building page
+- [X] Customizable text
+  - [X] Understandable content
+- [X] Building page
 
 ## Koen
-- [ ] be optimised for search engines
+- [X] be optimised for search engines
 - [X] footer
 - [X] use CSS for formatting, including at least:
   - [X] cascading styles through selector specificity
