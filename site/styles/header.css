@@ -10,6 +10,11 @@
         overflow-x: scroll;
         display: inline-flex;
         white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .scrollable-table::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-link {
