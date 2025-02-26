@@ -18,13 +18,9 @@
     }
 
     .nav-link {
-        /*width: 180px;*/
-        height: 3vh;
-        width: 20vh;
         background-color: lightblue;
         border: solid 2px black;
         color: black;
-        padding: 0.5vh;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -32,6 +28,7 @@
         margin: 5px;
         cursor: pointer;
         transition: background-color 0.2s ease-in;
+        padding: 5px;
     }
     
     .nav-link:hover {
