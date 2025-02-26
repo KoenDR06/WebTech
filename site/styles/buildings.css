@@ -11,7 +11,7 @@
     }
 
     .scrollable-table {
-        max-height: 80vh;
+        max-height: 70vh;
         overflow: auto;
         position: sticky;
         top: 85px;
