@@ -18,6 +18,6 @@ footer {
 /* Some logos have bigger margins than the others, so we scale them down */
 .small-logo {
     position: relative;
-    height: 1.92rem !important;
-    top: 4px;
+    height: 1.5rem !important;
+    top: 5px;
 }
