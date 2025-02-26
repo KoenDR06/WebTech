@@ -35,10 +35,10 @@ Your website must:
 - [ ] be compliant with the HTML5 rules of [W3C Markup Validation Service](https://validator.w3.org) and the CSS3 rules of
     [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator)
 - [ ] render correctly in the current versions of Chrome and Firefox browsers
-- [ ] follow the responsive Web design guidelines for
-  - [ ] images
-  - [ ] content positioning
-  - [ ] units of measurement
+  - [ ] follow the responsive Web design guidelines for
+    - [ ] images
+    - [ ] content positioning
+    - [ ] units of measurement
 - [X] not use any of the deprecated HTML elements or attributes (see for example [here](https://www.w3schools.com/tags/))
 - [X] define all formatting styles in a separate CSS file
 - [X] use consistent layout and colour scheme
