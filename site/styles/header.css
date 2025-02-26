@@ -18,11 +18,13 @@
     }
 
     .nav-link {
-        height: 25px;
+        /*width: 180px;*/
+        height: 3vh;
+        width: 20vh;
         background-color: lightblue;
         border: solid 2px black;
         color: black;
-        padding: 5px;
+        padding: 0.5vh;
         text-align: center;
         text-decoration: none;
         display: inline-block;
