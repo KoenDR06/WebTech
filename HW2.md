@@ -36,8 +36,8 @@ Class Course:
 - [ ] The options of the second menu should allow to change at least the font size and the font color of the selected elements. To implement menus you can use the HTML Select element.
 
 These pages explain how you can create and manipulate the Select element and its properties:
-- [ ] https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
-- [ ] https://www.w3schools.com/jsref/dom_obj_select.asp
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+- https://www.w3schools.com/jsref/dom_obj_select.asp
 
 ## Important rules to keep in mind:
 - [ ] The website should continue following the principles of responsive design and accessibility.
