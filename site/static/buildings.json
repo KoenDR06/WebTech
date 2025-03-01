@@ -1,6 +1,7 @@
-{
-  "accu": {
-    "abbr":"",
+[
+  {
+    "abbr": "",
+    "id": "accu",
     "name": "ACCU-gebouw",
     "maps_url": "https://www.google.nl/maps/place/Budapestlaan+8,+3584+CD+Utrecht",
     "address": " Budapestlaan 8, 3584 CD Utrecht",
@@ -13,8 +14,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "numan": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "numan",
     "name": "Alexander Numangebouw",
     "maps_url": "https://www.google.nl/maps/place/Budapestlaan+8,+3584+CD+Utrecht",
     "address": " Budapestlaan 8, 3584 CD Utrecht",
@@ -27,8 +29,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "androclus": {
-    "abbr":"ANDRO",
+  {
+    "abbr": "ANDRO",
+    "id": "androclus",
     "name": "Androclusgebouw",
     "maps_url": "https://www.google.nl/maps/place/Yalelaan+1,+3584+CL+Utrecht",
     "address": "Yalelaan 1, 3584 CL Utrecht ",
@@ -42,8 +45,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "bestuur": {
-    "abbr":"BESTUURS",
+  {
+    "abbr": "BESTUURS",
+    "id": "bestuur",
     "name": "Bestuursgebouw",
     "maps_url": "https://www.google.nl/maps/place/Heidelberglaan+8,+3584+CS+Utrecht",
     "address": "Heidelberglaan 8, 3584 CS Utrecht ",
@@ -56,8 +60,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "tuinen": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "tuinen",
     "name": "Botanische Tuinen",
     "maps_url": "https://www.google.nl/maps/place/Budapestlaan+17,+3584+CD+Utrecht",
     "address": "Budapestlaan 17, 3584 CD Utrecht ",
@@ -71,8 +76,9 @@
     "saturday": "10:00-16:30",
     "sunday": "10:00-16:30"
   },
-  "bologna": {
-    "abbr":"BOL",
+  {
+    "abbr": "BOL",
+    "id": "bologna",
     "name": "Bolognalaan 101",
     "maps_url": "https://www.google.nl/maps/place/Bolognalaan+101,+3584+CJ+Utrecht",
     "address": "Bolognalaan 101, 3584 CJ Utrecht ",
@@ -85,8 +91,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "ballot": {
-    "abbr":"BBG",
+  {
+    "abbr": "BBG",
+    "id": "ballot",
     "name": "Buys Ballotgebouw",
     "maps_url": "https://www.google.nl/maps/place/Princetonplein+5,+3584+CC+Utrecht",
     "address": "Princetonplein 5, 3584 CC Utrecht ",
@@ -99,8 +106,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "bleeker": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "bleeker",
     "name": "Caroline Bleekergebouw",
     "maps_url": "https://www.google.nl/maps/place/Sorbonnelaan+4,+3584+CA+Utrecht",
     "address": "Sorbonnelaan 4, 3584 CA Utrecht ",
@@ -113,8 +121,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "dalton": {
-    "abbr":"DALTON",
+  {
+    "abbr": "DALTON",
+    "id": "dalton",
     "name": "Daltonlaan 500",
     "maps_url": "https://www.google.nl/maps/place/Daltonlaan+500,+3584+BK+Utrecht",
     "address": "Daltonlaan 500, 3584 BK Utrecht ",
@@ -128,8 +137,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "wied": {
-    "abbr":"DDW",
+  {
+    "abbr": "DDW",
+    "id": "wied",
     "name": "David de Wiedgebouw",
     "maps_url": "https://www.google.nl/maps/place/Universiteitsweg+99,+3584+CG+Utrecht",
     "address": "Universiteitsweg 99, 3584 CG Utrecht ",
@@ -142,12 +152,12 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "earth-simulation-lab": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "earth-simulation-lab",
     "name": "Earth Simulation Lab",
     "maps_url": "https://www.google.nl/maps/place/Princetonlaan+4,+3584+CB+Utrecht",
     "address": "Princetonlaan 4, 3584 CB Utrecht ",
-    "telephone": "unknown",
     "monday": "7:30-19:30",
     "tuesday": "7:30-19:30",
     "wednesday": "7:30-19:30",
@@ -156,8 +166,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "educatorium": {
-    "abbr":"EDUC",
+  {
+    "abbr": "EDUC",
+    "id": "educatorium",
     "name": "Educatorium",
     "maps_url": "https://www.google.nl/maps/place/Leuvenlaan+19,+3584+CE+Utrecht",
     "address": "Leuvenlaan 19, 3584 CE Utrecht ",
@@ -171,14 +182,16 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "fort": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "fort",
     "name": "Fort Hoofddijk",
     "maps_url": "https://www.google.nl/maps/place/Budapestlaan+17,+3584+CD+Utrecht",
     "address": "Budapestlaan 17, 3584 CD Utrecht"
   },
-  "freudenthal": {
-    "abbr":"HFG",
+  {
+    "abbr": "HFG",
+    "id": "freudenthal",
     "name": "Hans Freudenthalgebouw",
     "maps_url": "https://www.google.nl/maps/place/Budapestlaan+6,+3584+CD+Utrecht",
     "address": "Budapestlaan 6, 3584 CD Utrecht ",
@@ -190,8 +203,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "bergh": {
-    "abbr":"HvdB",
+  {
+    "abbr": "HvdB",
+    "id": "bergh",
     "name": "Hijmans van den Berghgebouw",
     "maps_url": "https://www.google.nl/maps/place/Universiteitsweg+98,+3584+CG+Utrecht",
     "address": "Universiteitsweg 98, 3584 CG Utrecht ",
@@ -204,8 +218,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "kruyt": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "kruyt",
     "name": "Hugo R. Kruytgebouw",
     "maps_url": "https://www.google.nl/maps/place/Padualaan+8,+3584+CH+Utrecht",
     "address": "Padualaan 8, 3584 CH Utrecht ",
@@ -218,8 +233,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "donker-voet": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "donker-voet",
     "name": "Jeannette Donker-Voetgebouw",
     "maps_url": "https://www.google.nl/maps/place/Yalelaan+104-106,+3584+CM+Utrecht",
     "address": "Yalelaan 104-106, 3584 CM Utrecht ",
@@ -232,8 +248,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "ornstein": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "ornstein",
     "name": "Leonard S. Ornsteinlaboratorium",
     "maps_url": "https://www.google.nl/maps/place/Princetonplein+1,+3584+CC+Utrecht",
     "address": "Princetonplein 1, 3584 CC Utrecht ",
@@ -246,8 +263,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "ruppert": {
-    "abbr":"RUPPERT",
+  {
+    "abbr": "RUPPERT",
+    "id": "ruppert",
     "name": "Marinus Ruppertgebouw",
     "maps_url": "https://www.google.nl/maps/place/Leuvenlaan+21,+3584+CE+Utrecht",
     "address": "Leuvenlaan 21, 3584 CE Utrecht ",
@@ -260,8 +278,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "langeveld": {
-    "abbr":";LANGEVELD",
+  {
+    "abbr": "LANGEVELD",
+    "id": "langeveld",
     "name": "Martinus J. Langeveldgebouw",
     "maps_url": "https://www.google.nl/maps/place/Heidelberglaan+1,+3584+CS+Utrecht",
     "address": "Heidelberglaan 1, 3584 CS Utrecht ",
@@ -274,8 +293,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "bruin": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "bruin",
     "name": "Martinus G. de Bruingebouw",
     "maps_url": "https://www.google.nl/maps/place/Yalelaan+7,+3584+CL+Utrecht",
     "address": " Yalelaan 7, 3584 CL Utrecht ",
@@ -289,8 +309,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "minnaert": {
-    "abbr":"MIN",
+  {
+    "abbr": "MIN",
+    "id": "minnaert",
     "name": "Minnaertgebouw",
     "maps_url": "https://www.google.nl/maps/place/Leuvenlaan+4,+3584+CE+Utrecht",
     "address": " Leuvenlaan 4, 3584 CE Utrecht",
@@ -303,8 +324,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "bloembergen": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "bloembergen",
     "name": "Nicolaas Bloembergengebouw",
     "maps_url": "https://www.google.nl/maps/place/Padualaan+12,+3584+CH+Utrecht",
     "address": " Padualaan 12, 3584 CH Utrecht",
@@ -317,8 +339,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "gildestein": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "gildestein",
     "name": "Nieuw Gildestein",
     "maps_url": "https://www.google.nl/maps/place/Yalelaan+2,+3584+CM+Utrecht",
     "address": " Yalelaan 2, 3584 CM Utrecht ",
@@ -330,8 +353,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "npec": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "npec",
     "name": "NPEC",
     "maps_url": "https://www.google.nl/maps/place/Padualaan+6,+3584+CH+Utrecht",
     "address": " Padualaan 6, 3584 CH Utrecht",
@@ -344,8 +368,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "olympos": {
-    "abbr":"OLYMPOS",
+  {
+    "abbr": "OLYMPOS",
+    "id": "olympos",
     "name": "Olympos",
     "maps_url": "https://www.google.nl/maps/place/Uppsalalaan+3,+3584+CT+Utrecht",
     "address": " Uppsalalaan 3, 3584 CT Utrecht ",
@@ -359,8 +384,9 @@
     "saturday": "9:00-19:00",
     "sunday": "9:00-19:00"
   },
-  "pnyx": {
-    "abbr":"PNYX",
+  {
+    "abbr": "PNYX",
+    "id": "pnyx",
     "name": "Princetonplein 9",
     "maps_url": "https://www.google.nl/maps/place/Princetonplein+9,+3584+CC+Utrecht",
     "address": " Princetonplein 9, 3584 CC Utrecht ",
@@ -372,8 +398,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "jakob": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "jakob",
     "name": "Prof. dr. H. Jakobgebouw",
     "maps_url": "https://www.google.nl/maps/place/Hoofdingang+Yalelaan+108,+3584+CM+Utrecht",
     "address": " Hoofdingang Yalelaan 108, 3584 CM Utrecht ",
@@ -387,8 +414,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "groenman": {
-    "abbr":"SGG",
+  {
+    "abbr": "SGG",
+    "id": "groenman",
     "name": "Sjoerd Groenmangebouw",
     "maps_url": "https://www.google.nl/maps/place/Padualaan+14,+3584+CH+Utrecht",
     "address": " Padualaan 14, 3584 CH Utrecht",
@@ -401,8 +429,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "stratenum": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "stratenum",
     "name": "Stratenum",
     "maps_url": "https://www.google.nl/maps/place/Universiteitsweg+100,+3584+CG+Utrecht",
     "address": " Universiteitsweg 100, 3584 CG Utrecht",
@@ -415,8 +444,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "tolakker": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "tolakker",
     "name": "De Tolakker",
     "maps_url": "https://www.google.nl/maps/place/Jenalaan+19,+3584+CK+Utrecht",
     "address": " Jenalaan 19, 3584 CK Utrecht",
@@ -429,8 +459,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "bibliotheek": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "bibliotheek",
     "name": "Universiteitsbibliotheek",
     "maps_url": "https://www.google.nl/maps/place/Heidelberglaan+3,+3584+CS+Utrecht",
     "address": " Heidelberglaan 3, 3584 CS Utrecht ",
@@ -444,8 +475,9 @@
     "saturday": "10:00-22:30",
     "sunday": "10:00-22:30"
   },
-  "services": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "services",
     "name": "UU for U, Student Services",
     "maps_url": "https://www.google.nl/maps/place/Heidelberglaan+6,+3584+CS+Utrecht/@52.0851683,5.1740918,560m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c6689b2df9d85f:0x734dc048d533ba4d!8m2!3d52.0851683!4d5.1740918!16s%2Fg%2F11csf41wsx?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D",
     "address": " Heidelberglaan 6, 3584 CS Utrecht ",
@@ -459,8 +491,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "vagant": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "vagant",
     "name": "De Vagant",
     "maps_url": "https://www.google.nl/maps/place/Budapestlaan+4c,+3584+CD+Utrecht",
     "address": " Budapestlaan 4c, 3584 CD Utrecht ",
@@ -472,8 +505,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "meinesz-a": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "meinesz-a",
     "name": "Vening Meineszgebouw A",
     "maps_url": "https://www.google.nl/maps/place/Princetonlaan+8a,+3584+CB+Utrecht",
     "address": " Princetonlaan 8a, 3584 CB Utrecht ",
@@ -487,8 +521,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "meinesz-b": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "meinesz-b",
     "name": "Vening Meineszgebouw B",
     "maps_url": "https://www.google.nl/maps/place/Princetonlaan+8,+3584+CB+Utrecht",
     "address": " Princetonlaan 8, 3584 CB Utrecht ",
@@ -502,8 +537,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "meinesz-c": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "meinesz-c",
     "name": "Vening Meineszgebouw C",
     "maps_url": "https://www.google.nl/maps/place/Princetonlaan+6,+3584+CB+Utrecht",
     "address": " Princetonlaan 6, 3584 CB Utrecht ",
@@ -517,8 +553,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "koningsberger": {
-    "abbr":"KBG",
+  {
+    "abbr": "KBG",
+    "id": "koningsberger",
     "name": "Victor J. Koningsbergergebouw",
     "maps_url": "https://www.google.nl/maps/place/Budapestlaan+4a-b,+3584+CD+Utrecht",
     "address": " Budapestlaan 4a-b, 3584 CD Utrecht ",
@@ -532,8 +569,9 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "schimmel": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "schimmel",
     "name": "Willem C. Schimmelgebouw",
     "maps_url": "https://www.google.nl/maps/place/Yalelaan+112,+3584+CM+Utrecht",
     "address": " Yalelaan 112, 3584 CM Utrecht ",
@@ -547,11 +585,12 @@
     "saturday": "Closed",
     "sunday": "Closed"
   },
-  "unnik": {
-    "abbr":"",
+  {
+    "abbr": "",
+    "id": "unnik",
     "name": "Willem C. van Unnikgebouw",
     "maps_url": "https://www.google.nl/maps/place/Heidelberglaan+2,+3584+CS+Utrecht",
     "address": "Heidelberglaan 2, 3584 CS Utrecht",
     "telephone": "030 - 253 8538"
   }
-}
+]
