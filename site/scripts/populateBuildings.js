@@ -1,11 +1,11 @@
-const buildingsContainer = document.body.querySelector(".main-content article");
-const contentTable = document.body.querySelector(".main-content aside tbody");
+const buildingsContainer = document.querySelector(".main-content article");
+const contentTable = document.querySelector(".main-content aside tbody");
 
 fetch('/static/buildings.json')
     .then(response => response.json())
     .then(json => {
         for (let building of json) {
-            // ---- Main Content ----
+            /* ---- Main Content ---- */
 
             // Create div
             const div = document.createElement("div");
@@ -60,11 +60,7 @@ fetch('/static/buildings.json')
 
             buildingsContainer.appendChild(div);
 
-            // ---- Content Table ----
-            // <tr>
-            //     <td><a className="header-link" href="#accu">ACCU-gebouw</a></td>
-            //     <td></td>
-            // </tr>
+            /* ---- Content Table ---- */
 
             const row = document.createElement("tr");
             const left = document.createElement("td");

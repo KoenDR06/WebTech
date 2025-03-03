@@ -4,9 +4,9 @@ Develop a dynamic version of the website created in Assignment 1 using JavaScrip
 
 ## From HW1:
 - [ ] Modify the pages about the members of your group in such as a way that the main content of the pages is constructed dynamically purely through DOM manipulation (not document.write(), not .innerHTML) from the JSON files you prepare. 
-- [ ] Such elements as <nav>, < header>, <footer> and <aside> can still be a part of the corresponding html files, but all the main content of the pages has to be produced by JavaScript on the fly. 
-- [ ] To load the content, you should use the FileReader interface and the <input type="file"> element. 
-- [ ] These pages should be originally empty and contain the <input type="file"> interfaces (with the explanations which files to load)
+- [ ] Such elements as `<nav>`, `<header>`, `<footer>` and `<aside>` can still be a part of the corresponding html files, but all the main content of the pages has to be produced by JavaScript on the fly. 
+- [ ] To load the content, you should use the FileReader interface and the `<input type="file">` element. 
+- [ ] These pages should be originally empty and contain the `<input type="file">` interfaces (with the explanations which files to load)
 - [ ] After reading JSON file you need to create object-oriented structured descriptions of the members of your group, and then use it to populate the content of the pages.
 
 ## Classes we need to use:
