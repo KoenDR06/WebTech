@@ -49,14 +49,34 @@ function populate(event) {
                 const tableBody = document.createElement("tbody");
                 openingHours.appendChild(tableBody);
 
-                tableBody.innerHTML =
-                    `<tr><th>Monday:</th><td>${building.monday}</td></tr>` +
-                    `<tr><th>Tuesday:</th><td>${building.tuesday}</td></tr>` +
-                    `<tr><th>Wednesday:</th><td>${building.wednesday}</td></tr>` +
-                    `<tr><th>Thursday:</th><td>${building.thursday}</td></tr>` +
-                    `<tr><th>Friday:</th><td>${building.friday}</td></tr>` +
-                    `<tr><th>Saturday:</th><td>${building.saturday}</td></tr>` +
-                    `<tr><th>Sunday:</th><td>${building.sunday}</td></tr>`;
+                const days = [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ];
+                const dayInfo = [
+                    building.monday,
+                    building.tuesday,
+                    building.wednesday,
+                    building.thursday,
+                    building.friday,
+                    building.saturday,
+                    building.sunday
+                ];
+                for (let i = 0; i < 7; i++) {
+                    const row = document.createElement("tr");
+                    const left = document.createElement("th");
+                    left.innerText = days[i];
+                    const right = document.createElement("td");
+                    right.innerText = dayInfo[i];
+                    row.appendChild(left);
+                    row.appendChild(right);
+                    tableBody.appendChild(row);
+                }
 
                 div.appendChild(openingHours)
             } else {
