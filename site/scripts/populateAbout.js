@@ -1,3 +1,13 @@
+class Person {
+    constructor(json) {
+        this.name = json.name;
+        this.shortName = json.name.split(" ")[0];
+        this.id = this.shortName.toLowerCase();
+        this.profilePicture = json.profile_picture;
+        this.about = json.about;
+    }
+}
+
 const aboutContainer = document.querySelector("article > section");
 const fileInput = aboutContainer.children[2]
 
@@ -8,19 +18,19 @@ function populate(event) {
 
     const reader = new FileReader();
     reader.onload = () => {
-        const json = JSON.parse(reader.result);
+        const people = JSON.parse(reader.result).map( (person) => new Person(person) );
 
-        for (let personInfo of json) {
+        for (let person of people) {
             /* ---- Main Content ---- */
 
             // Create section
             const section = document.createElement("section");
             section.classList.add("scroll-target");
-            section.id = personInfo.id;
+            section.id = person.id;
 
             // Create title
             const title = document.createElement("h2");
-            title.innerText = personInfo.name;
+            title.innerText = person.name;
             section.appendChild(title);
 
             // Create personal text div
@@ -31,15 +41,15 @@ function populate(event) {
             // Create profile picture in div
             const img = document.createElement("img");
             img.classList.add("profile-picture");
-            img.src = personInfo.profile_picture;
-            img.alt = `Picture of team member ${personInfo.name.split(" ")[0]}`
+            img.src = person.profilePicture;
+            img.alt = `Picture of team member ${person.shortName}`
             div.appendChild(img);
 
             // Add text to div
             const textDiv = document.createElement("div");
             textDiv.classList.add("about-member-text");
             div.appendChild(textDiv);
-            for (let p of personInfo.about) {
+            for (let p of person.about) {
                 const para = document.createElement("p");
                 para.innerHTML = p; // TODO This is technically speaking not allowed by the requirements, but how else are we supposed to make this content render right?
                 textDiv.appendChild(para);

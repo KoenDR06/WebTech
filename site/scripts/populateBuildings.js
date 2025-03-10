@@ -1,3 +1,24 @@
+class Building {
+    constructor(json) {
+        this.abbr = json.abbr;
+        this.id = json.id;
+        this.name = json.name;
+        this.mapsURL = json.maps_url;
+        this.address = json.address;
+
+        this.telephone = (json.telephone ? json.telephone : "Unknown.");
+
+        this.monday = json.monday;
+        this.tuesday = json.tuesday;
+        this.wednesday = json.wednesday;
+        this.thursday = json.thursday;
+        this.friday = json.friday;
+        this.saturday = json.saturday;
+        this.sunday = json.sunday;
+        this.hasOpeningTimes = !!json.monday // If the entry for monday exists, the rest also exists
+    }
+}
+
 const buildingsContainer = document.querySelector(".main-content article");
 const contentTable = document.querySelector(".main-content aside tbody");
 
@@ -10,8 +31,9 @@ function populate(event) {
 
     const reader = new FileReader();
     reader.onload = () => {
-        const json = JSON.parse(reader.result);
-        for (let building of json) {
+        const buildings = JSON.parse(reader.result).map( (building) => new Building(building) );
+
+        for (let building of buildings) {
             /* ---- Main Content ---- */
 
             // Create div
@@ -28,18 +50,18 @@ function populate(event) {
             const address = document.createElement("p");
             address.appendChild(document.createTextNode("Address: "));
             const addressLink = document.createElement("a");
-            addressLink.href = building.maps_url;
+            addressLink.href = building.mapsURL;
             addressLink.text = building.address;
             address.appendChild(addressLink);
             div.appendChild(address);
 
             // Create phone number
             const phone = document.createElement("p");
-            phone.innerText = "Tel: " + (building.telephone ? building.telephone : "Unknown.");
+            phone.innerText = "Tel: " + building.telephone;
             div.appendChild(phone);
 
             // Create opening hours table
-            if (building.monday) {
+            if (building.hasOpeningTimes) {
                 const openingHeading = document.createElement("h3");
                 openingHeading.innerText = "Opening Hours: ";
                 div.appendChild(openingHeading);

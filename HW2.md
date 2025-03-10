@@ -3,10 +3,10 @@
 Develop a dynamic version of the website created in Assignment 1 using JavaScript (if necessary, you can change/extend the main theme). Use DOM methods, nodes, properties and events to interactively modify the content and appearance of your web pages according to user actions. Use event listeners to process the events. Implement at least 1 case of event propagation (W3C model).
 
 ## From HW1:
-- [ ] Modify the pages about the members of your group in such as a way that the main content of the pages is constructed dynamically purely through DOM manipulation (not document.write(), not .innerHTML) from the JSON files you prepare. 
-- [ ] Such elements as `<nav>`, `<header>`, `<footer>` and `<aside>` can still be a part of the corresponding html files, but all the main content of the pages has to be produced by JavaScript on the fly. 
-- [ ] To load the content, you should use the FileReader interface and the `<input type="file">` element. 
-- [ ] These pages should be originally empty and contain the `<input type="file">` interfaces (with the explanations which files to load)
+- [X] Modify the pages about the members of your group in such as a way that the main content of the pages is constructed dynamically purely through DOM manipulation (not document.write(), not .innerHTML) from the JSON files you prepare. 
+- [X] Such elements as `<nav>`, `<header>`, `<footer>` and `<aside>` can still be a part of the corresponding html files, but all the main content of the pages has to be produced by JavaScript on the fly. 
+- [X] To load the content, you should use the FileReader interface and the `<input type="file">` element. 
+- [X] These pages should be originally empty and contain the `<input type="file">` interfaces (with the explanations which files to load)
 - [ ] After reading JSON file you need to create object-oriented structured descriptions of the members of your group, and then use it to populate the content of the pages.
 
 ## Classes we need to use:
