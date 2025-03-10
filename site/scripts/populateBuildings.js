@@ -1,9 +1,16 @@
 const buildingsContainer = document.querySelector(".main-content article");
 const contentTable = document.querySelector(".main-content aside tbody");
 
-fetch('/static/buildings.json')
-    .then(response => response.json())
-    .then(json => {
+const fileInput = buildingsContainer.children[2]
+
+fileInput.addEventListener("change", populate)
+
+function populate(event) {
+    const file = event.target.files[0];
+
+    const reader = new FileReader();
+    reader.onload = () => {
+        const json = JSON.parse(reader.result);
         for (let building of json) {
             /* ---- Main Content ---- */
 
@@ -79,4 +86,9 @@ fetch('/static/buildings.json')
             contentTable.appendChild(row);
 
         }
-    });
+    }
+    reader.readAsText(file);
+
+    fileInput.remove()
+    buildingsContainer.children[1].remove()
+}

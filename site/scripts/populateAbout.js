@@ -1,8 +1,15 @@
 const aboutContainer = document.querySelector("article > section");
+const fileInput = aboutContainer.children[2]
 
-fetch('/static/about.json')
-    .then(response => response.json())
-    .then(json => {
+fileInput.addEventListener("change", populate)
+
+function populate(event) {
+    const file = event.target.files[0];
+
+    const reader = new FileReader();
+    reader.onload = () => {
+        const json = JSON.parse(reader.result);
+
         for (let personInfo of json) {
             /* ---- Main Content ---- */
 
@@ -40,4 +47,10 @@ fetch('/static/about.json')
 
             aboutContainer.appendChild(section);
         }
-    });
+    };
+
+    reader.readAsText(file);
+
+    fileInput.remove()
+    aboutContainer.children[1].remove()
+}
