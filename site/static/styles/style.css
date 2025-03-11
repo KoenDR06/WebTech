@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    word-wrap: break-word;
+}
+
+html {
+    font-size: 32px;
+    scroll-behavior: smooth;
+}
+
+p {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.scroll-target {
+    scroll-margin: 75px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+
+.content-table, .content-table td, .content-table th {
+    border: 1px solid black;
+}
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bolder;
+}
+
+.opening-hours-table th {
+    text-align: right;
+}
+
+.profile-picture {
+    border: solid 2px black;
+    width: 200px;
+    height: 200px;
+}
+
+.team-member-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.about-member-text {
+    margin: 0 10px 0 10px;
+    width: 80%;
+}
+
+.team-member-text > p {
+    padding-bottom: 10px;
+}
+
+
+/* header */
+
+header {
+    margin-top: 0;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: lightblue;
+    display: flex;
+}
+
+header > p {
+    margin: 0;
+    margin-left: 50px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-picture {
+    max-height: 49px;
+    width:auto;
+}
+
+
+/* nav */
+
+nav {
+    background-color: grey;
+    padding: 10px;
+    width: calc(100% - 20px);
+    position: sticky;
+    top: 0;
+    text-align: center;
+
+    overflow-x: scroll;
+    display: inline-flex;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.scrollable-table::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-link {
+    background-color: lightblue;
+    border: solid 2px black;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+    padding: 5px;
+}
+
+.nav-link:hover {
+    background-color: rgb(0, 140, 255);
+}
+
+
+/* footer */
+
+footer {
+    background-color: lightblue;
+    margin-top: 50px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logos {
+    display: flex;
+}
+
+.footer-logos img {
+    height: 2rem;
+    margin-left: 5px;
+}
+
+/* Some logos have bigger margins than the others, so we scale them down */
+.small-logo {
+    position: relative;
+    height: 1.5rem !important;
+    top: 5px;
+}
+
+
+@media only screen and (min-width: 450px) {
+    nav {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .team-member-section {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (min-height: 500px) {
+    body {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    html { font-size: 24px; }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    html { font-size: 16px; }
+}
+
+
+@media only screen and (min-width: 1200px) and (min-height: 500px) {
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    aside {
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .scrollable-table {
+        max-height: 70vh;
+        overflow: auto;
+        position: sticky;
+        top: 85px;
+        scrollbar-width: none;
+    }
+
+    .scrollable-table::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    aside {
+        margin: 20px 20px 20px 0;
+    }
+}
