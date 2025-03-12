@@ -33,27 +33,21 @@ h3 {
     font-size: 1.25rem;
 }
 
-.scrollable-table--content, .scrollable-table--content td, .scrollable-table--content th {
+.scrollable-table__content, .scrollable-table__content td, .scrollable-table__content th {
     border: 1px solid black;
 }
 
-.header-link {
+.header__link {
     text-decoration: none;
     color: inherit;
     font-weight: bolder;
 }
 
-.opening-hours-table th {
+.obuildings__opening-hours-table th {
     text-align: right;
 }
 
-.profile-picture {
-    border: solid 2px black;
-    width: 200px;
-    height: 200px;
-}
-
-.team-member-section {
+.team-member {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -64,12 +58,18 @@ h3 {
     transition: max-height 0.4s ease-in-out;
 }
 
-.about-member-text {
+.team-member__picture {
+    border: solid 2px black;
+    width: 200px;
+    height: 200px;
+}
+
+.team-member__text {
     margin: 0 10px 0 10px;
     width: 80%;
 }
 
-.team-member-text > p {
+.team-member__text > p {
     padding-bottom: 10px;
 }
 
@@ -92,7 +92,7 @@ header > p {
     font-weight: bold;
 }
 
-.header-picture {
+.header__picture {
     max-height: 49px;
     width:auto;
 }
@@ -171,7 +171,7 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
-    .team-member-section {
+    .team-member {
         display: block;
     }
 }
