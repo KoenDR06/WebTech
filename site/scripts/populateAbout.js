@@ -34,20 +34,20 @@ function populate(event) {
             section.appendChild(title);
 
             // Create personal text div
-            const div = document.createElement("div");
-            div.classList.add("team-member-section");
-            section.appendChild(div);
+            const div = document.createElement("section");
+            div.classList.add("team-member");
+            section.appendChild(section);
 
             // Create profile picture in div
             const img = document.createElement("img");
-            img.classList.add("profile-picture");
+            img.classList.add("team-member__picture");
             img.src = person.profilePicture;
             img.alt = `Picture of team member ${person.shortName}`
             div.appendChild(img);
 
             // Add text to div
             const textDiv = document.createElement("div");
-            textDiv.classList.add("about-member-text");
+            textDiv.classList.add("team-member__text");
             div.appendChild(textDiv);
             for (let p of person.about) {
                 const para = document.createElement("p");

@@ -67,7 +67,7 @@ function populate(event) {
                 div.appendChild(openingHeading);
 
                 const openingHours = document.createElement("table");
-                openingHours.classList.add("opening-hours-table");
+                openingHours.classList.add("buildings__opening-hours-table");
                 const tableBody = document.createElement("tbody");
                 openingHours.appendChild(tableBody);
 
@@ -116,7 +116,7 @@ function populate(event) {
             const link = document.createElement("a");
             left.appendChild(link);
 
-            link.classList.add("header-link");
+            link.classList.add("header__link");
             link.href = `#${building.id}`;
             link.text = building.name;
 
