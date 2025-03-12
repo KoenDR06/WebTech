@@ -1,22 +1,44 @@
 class Person {
+    #firstName;
+    #lastName;
+    #title;
+
     constructor(json) {
-        this.firstName = json.first_name;
-        this.lastName = json.last_name;
-        this.title = json.title ? json.title : "";
+        this.#firstName = json.first_name;
+        this.#lastName = json.last_name;
+        this.#title = json.title ? json.title : "";
     }
+
+    get firstName() {return this.#firstName}
+    get lastName() {return this.#lastName}
+    get title() {return this.#title}
 }
 
 class Student extends Person {
+    #age;
+    #email;
+    #hobbies;
+    #photo;
+    #major;
+    #courses;
+
     constructor(json) {
         super(json);
 
-        this.age = json.age;
-        this.hobbies = json.hobbies;
-        this.email = json.email;
-        this.photo = json.profile_picture;
-        this.major = json.major;
-        this.courses = json.courses;
+        this.#age = json.age;
+        this.#email = json.email;
+        this.#hobbies = json.hobbies;
+        this.#photo = json.profile_picture;
+        this.#major = json.major;
+        this.#courses = json.courses;
     }
+
+    get age() {return this.#age}
+    get email() {return this.#email}
+    get hobbies() {return this.#hobbies}
+    get photo() {return this.#photo}
+    get major() {return this.#major}
+    get courses() {return this.#courses}
 }
 
 const aboutContainer = document.querySelector("article > section");
