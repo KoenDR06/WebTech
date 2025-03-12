@@ -12,6 +12,24 @@ class Person {
     get firstName() {return this.#firstName}
     get lastName() {return this.#lastName}
     get title() {return this.#title}
+
+    set firstName(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#firstName = value;
+    }
+
+    set lastName(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#lastName = value;
+    }
+
+    set title(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#title = value;
+    }
 }
 
 class Student extends Person {
@@ -85,20 +103,21 @@ function populate(event) {
             });
 
             // Create personal text div
-            const div = document.createElement("div");
-            div.classList.add("team-member-section");
+            const div = document.createElement("section");
+            div.classList.add("team-member");
             section.appendChild(div);
 
             // Create profile picture in div
             const img = document.createElement("img");
-            img.classList.add("profile-picture");
+
+            img.classList.add("team-member__picture");
             img.src = person.photo;
             img.alt = `Picture of team member ${person.firstName}`
             div.appendChild(img);
 
             // Create div for rest of the content
             const personalInfoDiv = document.createElement("div");
-            personalInfoDiv.classList.add("about-member-text");
+            personalInfoDiv.classList.add("team-member__text");
             div.appendChild(personalInfoDiv);
 
             // Age

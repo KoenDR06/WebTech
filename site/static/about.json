@@ -29,7 +29,10 @@
       "first_name": "Bas",
       "last_name": "Lodewijk",
       "age": 20,
-      "hobbies": [],
+      "hobbies": [
+        "gaming",
+        "athletics"
+      ],
       "email": "s.t.lodewijk@students.uu.nl",
       "profile_picture": "static/images/bas.png",
       "major": "Computer Science",
