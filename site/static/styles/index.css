@@ -51,6 +51,11 @@ h3 {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    overflow: hidden;
+
+    /* max-height 0 so that is hidden on page load */
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
 }
 
 .team-member__picture {
