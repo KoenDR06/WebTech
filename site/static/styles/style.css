@@ -33,7 +33,7 @@ h3 {
     font-size: 1.25rem;
 }
 
-.content-table, .content-table td, .content-table th {
+.scrollable-table--content, .scrollable-table--content td, .scrollable-table--content th {
     border: 1px solid black;
 }
 
@@ -142,17 +142,17 @@ footer {
     justify-content: space-between;
 }
 
-.footer-logos {
+.footer__logos {
     display: flex;
 }
 
-.footer-logos img {
+.footer__logos img {
     height: 2rem;
     margin-left: 5px;
 }
 
 /* Some logos have bigger margins than the others, so we scale them down */
-.small-logo {
+.footer__logos--small {
     position: relative;
     height: 1.5rem !important;
     top: 5px;
