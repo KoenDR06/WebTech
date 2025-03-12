@@ -39,6 +39,7 @@ class Student extends Person {
     #photo;
     #major;
     #courses;
+    #quote;
 
     constructor(json) {
         super(json);
@@ -49,6 +50,7 @@ class Student extends Person {
         this.#photo = json.profile_picture;
         this.#major = json.major;
         this.#courses = json.courses;
+        this.#quote = json.quote;
     }
 
     get age() {return this.#age}
@@ -57,33 +59,34 @@ class Student extends Person {
     get photo() {return this.#photo}
     get major() {return this.#major}
     get courses() {return this.#courses}
+    get quote() {return this.#quote}
 
     set age(value) {
-        if (!value instanceof Integer ||
-            (value > 0 ) ) return;
+        if (!value instanceof Integer || //Check of goed is.
+            !(value > 0 && value < 90 ) ) return;
         this.#age = value;
     }
 
     set email(value) {
-        if (!value instanceof String ||
+        if (!value instanceof String || //Done
             value === "") return;
         this.#email = value;
     }
 
     set hobbies(value) {
-        if (!value instanceof String ||
+        if (!value instanceof array ||
             value === "") return;
         this.#hobbies = value;
     }
 
     set photo(value) {
-        if (!value instanceof String ||
+        if (!value instanceof String || //Done
             value === "") return;
         this.#photo = value;
     }
 
     set major(value) {
-        if (!value instanceof String ||
+        if (!value instanceof String || //Done
             value === "") return;
         this.#major = value;
     }
@@ -92,6 +95,12 @@ class Student extends Person {
         if (!value instanceof String ||
             value === "") return;
         this.#courses = value;
+    }
+
+    set quote(value) {
+        if (!value instanceof String || //Done
+            value === "") return;
+        this.#quote = value;
     }
 }
 
@@ -203,6 +212,9 @@ function populate(event) {
                 courseList.appendChild(li);
             }
 
+            // Quote
+            // Vergeet de quote niet!
+
             personalInfoDiv.appendChild(age);
             personalInfoDiv.appendChild(major);
             personalInfoDiv.appendChild(email);
@@ -210,6 +222,7 @@ function populate(event) {
             personalInfoDiv.appendChild(hobbyList);
             personalInfoDiv.appendChild(courses);
             personalInfoDiv.appendChild(courseList)
+            // Vergeet de quote niet!
 
             aboutContainer.appendChild(section);
         }
