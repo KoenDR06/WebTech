@@ -1,28 +1,27 @@
 {
   "people": [
     {
-      "id": "kitty",
       "title": "ing. ",
       "first_name": "Kitty",
       "last_name": "van der Heyden",
       "age": 21,
       "hobbies": [
-        "cycling",
-        "hiking",
-        "fitness",
-        "bouldering",
-        "reading"
+        "Cycling",
+        "Hiking",
+        "Fitness",
+        "Bouldering",
+        "Reading"
       ],
       "email": "k.vanderheyden@students.uu.nl",
       "profile_picture": "static/images/kitty.png",
       "major": "Applied Physics & Computer Science",
       "courses": [
-        "infoimp",
-        "infonw",
-        "infob1li",
-        "infob1pica",
-        "infob2wt",
-        "infodb"
+        "INFOIMP",
+        "INFONW",
+        "INFOB1LI",
+        "INFOB1PICA",
+        "INFOB2WT",
+        "INFODB"
       ],
       "about": [
         "Kitty is also doing the Computer Science Bachelor at the University Utrecht. She follows the same courses just like Koen and Bas. She really likes programming different languages, just like LABview even though many people despise it.In this bachelor she can combine her knowledge of physics and mathematics with the knowledge of Computer Science, allowing her to apply analytical and problem-solving skills across multiple disciplines.",
@@ -30,7 +29,6 @@
       ]
     },
     {
-      "id": "bas",
       "first_name": "Bas",
       "last_name": "Lodewijk",
       "age": 20,
@@ -39,12 +37,12 @@
       "profile_picture": "static/images/bas.png",
       "major": "Computer Science",
       "courses": [
-        "infoimp",
-        "infonw",
-        "infob1li",
-        "infob1pica",
-        "infob2wt",
-        "infodb"
+        "INFOIMP",
+        "INFONW",
+        "INFOB1LI",
+        "INFOB1PICA",
+        "INFOB2WT",
+        "INFODB"
       ],
       "about": [
         "Bas is also doing the Computer Science Bachelor at the University Utrecht. As a first year student he has the same courses as Koen and Kitty. He choise Computer Science because he enjoyed the subject at highschool. So far, his favorite course is Webtechnologie. He likes more pratical courses where he can work on code, because he enjoys the practical problemsolving it requires.",
@@ -52,21 +50,24 @@
       ]
     },
     {
-      "id": "koen",
       "first_name": "Koen",
       "last_name": "de Ruiter",
       "age": 18,
-      "hobbies": [],
+      "hobbies": [
+        "Programming",
+        "Going for walks",
+        "Sleeping"
+      ],
       "email": "k.j.deruiter@students.uu.nl",
       "profile_picture": "static/images/koen.png",
       "major": "Computer Science",
       "courses": [
-        "infoimp",
-        "infonw",
-        "infob1li",
-        "infob1pica",
-        "infob2wt",
-        "infodb"
+        "INFOIMP",
+        "INFONW",
+        "INFOB1LI",
+        "INFOB1PICA",
+        "INFOB2WT",
+        "INFODB"
       ],
       "about": [
         "Koen is following the Computer Science course at Utrecht University. He is in his first year, and is currently taking the <b>Web Technology</b> and the <b>Databases</b> course. His hobbies include studying, learning about computer science, reading the books of his courses and evaluating contents of informational material he happens to be involved in at that moment of time, mostly the courses he takes at Utrecht University, where he studies Computer Science. He also likes to have one side project that he just does for fun, which currently is <a href=\"https://github.com/KoenDR06/WebTech\" target=\"_blank\">this project</a>. It is an informational website for students who are studying Computer Science at Utrecht University, just like he does. Lastly, he hates repeating information, as repeating information again is \"Not needed and it doesn't add anything. Furthermore, it adds nothing and is unnecessary\"."
@@ -74,32 +75,32 @@
     }
   ],
   "courses": {
-    "infoimp": {
+    "INFOIMP": {
       "name": "Imperatief programmeren",
       "teacher": "Jeroen Fokker",
       "description": "This courses teaches you the basics of programming with the languages C# and Python."
     },
-    "infonw": {
+    "INFONW": {
       "name": "Computerarchitectuur en netwerken",
       "teacher": "Lennart Herlaar & Ioana Karnstedt-Hulpus",
       "description": "This courses teaches you the basics of how a computer works (CPU, ALU) and how networks behave."
     },
-    "infob1li": {
+    "INFOB1LI": {
       "name": "Logica voor informatica",
       "teacher": "Lennart Herlaar & Ioana Karnstedt-Hulpus",
       "description": "This courses teaches you the basics of how a computer works (CPU, ALU) and how networks behave."
     },
-    "infob1pica": {
+    "INFOB1PICA": {
       "name": "Informatica introductieproject",
       "teacher": "Jelle Oostveen & Lucas Meijer",
       "description": "This courses teaches you how to work together as a team during a project."
     },
-    "infob2wt": {
+    "INFOB2WT": {
       "name": "Webtechnologie",
       "teacher": "Dr. Sergey Sosnovsky",
       "description": "This courses teaches you how create a website with HTML, CSS and Javascript."
     },
-    "infodb": {
+    "INFODB": {
       "name": "Databases",
       "teacher": "Hans Philippi",
       "description": "This courses teaches you how create and maintain a database with SQL."
