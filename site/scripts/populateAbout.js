@@ -57,6 +57,42 @@ class Student extends Person {
     get photo() {return this.#photo}
     get major() {return this.#major}
     get courses() {return this.#courses}
+
+    set age(value) {
+        if (!value instanceof Integer ||
+            (value > 0 ) ) return;
+        this.#age = value;
+    }
+
+    set email(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#email = value;
+    }
+
+    set hobbies(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#hobbies = value;
+    }
+
+    set photo(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#photo = value;
+    }
+
+    set major(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#major = value;
+    }
+
+    set courses(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#courses = value;
+    }
 }
 
 const aboutContainer = document.querySelector("article > section");
