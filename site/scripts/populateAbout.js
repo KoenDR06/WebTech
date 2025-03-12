@@ -1,8 +1,34 @@
 class Person {
+    #firstName;
+    #lastName;
+    #title;
+
     constructor(json) {
         this.firstName = json.first_name;
         this.lastName = json.last_name;
         this.title = json.title ? json.title : "";
+    }
+
+    get firstName() {return this.#firstName}
+    get lastName() {return this.#lastName}
+    get title() {return this.#title}
+
+    set firstName(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#firstName = value;
+    }
+
+    set lastName(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#lastName = value;
+    }
+
+    set title(value) {
+        if (!value instanceof String ||
+            value === "") return;
+        this.#title = value;
     }
 }
 
