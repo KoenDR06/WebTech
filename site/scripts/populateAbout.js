@@ -4,9 +4,9 @@ class Person {
     #title;
 
     constructor(json) {
-        this.firstName = json.first_name;
-        this.lastName = json.last_name;
-        this.title = json.title ? json.title : "";
+        this.#firstName = json.first_name;
+        this.#lastName = json.last_name;
+        this.#title = json.title ? json.title : "";
     }
 
     get firstName() {return this.#firstName}
@@ -33,15 +33,74 @@ class Person {
 }
 
 class Student extends Person {
+    #age;
+    #email;
+    #hobbies;
+    #photo;
+    #major;
+    #courses;
+    #quote;
+
     constructor(json) {
         super(json);
 
-        this.age = json.age;
-        this.hobbies = json.hobbies;
-        this.email = json.email;
-        this.photo = json.profile_picture;
-        this.major = json.major;
-        this.courses = json.courses;
+        this.#age = json.age;
+        this.#email = json.email;
+        this.#hobbies = json.hobbies;
+        this.#photo = json.profile_picture;
+        this.#major = json.major;
+        this.#courses = json.courses;
+        this.#quote = json.quote;
+    }
+
+    get age() {return this.#age}
+    get email() {return this.#email}
+    get hobbies() {return this.#hobbies}
+    get photo() {return this.#photo}
+    get major() {return this.#major}
+    get courses() {return this.#courses}
+    get quote() {return this.#quote}
+
+    set age(value) {
+        if (!Number.isInteger(value) || //Check of goed is.
+            value < 0 || value > 90 ) return;
+        this.#age = value;
+    }
+
+    set email(value) {
+        if (!value instanceof String || //Done
+            value === "") return;
+        this.#email = value;
+    }
+
+    set hobbies(value) {
+        if (!Array.isArray(value) ||
+            value.some(item => !item instanceof String || item === "")) return;
+        this.#hobbies = value;
+    }
+
+    set photo(value) {
+        if (!value instanceof String || //Done
+            value === "") return;
+        this.#photo = value;
+    }
+
+    set major(value) {
+        if (!value instanceof String || //Done
+            value === "") return;
+        this.#major = value;
+    }
+
+    set courses(value) {
+        if (!Array.isArray(value) ||
+            value.some(item => !item instanceof String || item === "")) return;
+        this.#courses = value;
+    }
+
+    set quote(value) {
+        if (!value instanceof String || //Done
+            value === "") return;
+        this.#quote = value;
     }
 }
 
@@ -153,6 +212,9 @@ function populate(event) {
                 courseList.appendChild(li);
             }
 
+            // Quote
+            // Vergeet de quote niet!
+
             personalInfoDiv.appendChild(age);
             personalInfoDiv.appendChild(major);
             personalInfoDiv.appendChild(email);
@@ -160,6 +222,7 @@ function populate(event) {
             personalInfoDiv.appendChild(hobbyList);
             personalInfoDiv.appendChild(courses);
             personalInfoDiv.appendChild(courseList)
+            // Vergeet de quote niet!
 
             aboutContainer.appendChild(section);
         }
