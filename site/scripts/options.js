@@ -92,6 +92,7 @@ var backColorInput = document.createElement("input");
 backColorInput.id = "backColorInput";
 backColorInput.type = "color";
 
+// append
 footer.appendChild(fontSelectLabel);
 footer.appendChild(fontSelect);
 footer.appendChild(fontSizeSliderLabel);
@@ -101,6 +102,7 @@ footer.appendChild(fontColorInput);
 footer.appendChild(backColorInputLabel);
 footer.appendChild(backColorInput);
 
+// function to apply selected options
 function applyChanges() {
     var element = document.getElementById(elementMenu.value);
     element.style.fontFamily = fontSelect.value;
@@ -109,6 +111,7 @@ function applyChanges() {
     element.style.backgroundColor = backColorInput.value;
 }
 
+// button to apply changes
 applyButton = document.createElement("button");
 applyButton.textContent = "Apply changes";
 applyButton.addEventListener("click",applyChanges);
