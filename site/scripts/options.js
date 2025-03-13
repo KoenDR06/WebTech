@@ -20,25 +20,23 @@ const footer = document.querySelector("footer");
 
 // Add all the options for the elements for the elementMenu
 let element = document.createElement("option");
-element.textContent = body.id;
+element.label = body.id;
 elementMenu.appendChild(element);
 for (let i = 0; i < articleList.length; i++) {
     element = document.createElement("option");
-    element.textContent = articleList[i].id;
+    element.label = articleList[i].id;
     elementMenu.appendChild(element);
 }
 for (let i = 0; i < sectionList.length; i++) {
     element = document.createElement("option");
-    element.textContent = sectionList[i].id;
+    element.label = sectionList[i].id;
     elementMenu.appendChild(element);
 }
 for (let i = 0; i < asideList.length; i++) {
     element = document.createElement("option");
-    element.textContent = asideList[i].id;
+    element.label = asideList[i].id;
     elementMenu.appendChild(element);
 }
-
-footer.appendChild(elementMenu);
 
 // Menu two: modify the selected element
 // Change the font size
@@ -54,15 +52,15 @@ const fontSelect = document.createElement("select");
 const fontList = ["Arial", "Verdana", "Helvetica",
     "Times New Roman", "Georgia", "Garamond",
     "Courier New", "Lucida Console", "Monaco"];
-for (let i = 0; i < fontList.Length; i++) {
-    const font = document.createElement("option");
-    font.textContent = fontList[i];
+for (let i = 0; i < fontList.length; i++) {
+    font = document.createElement("option");
+    font.label = fontList[i];
     fontSelect.appendChild(font);
 }
 
 // Make label for fontSizeSlider
 const fontSizeSliderLabel = document.createElement("label");
-fontSizeSliderLabel.textContent = "Select font size:";
+fontSizeSliderLabel.textContent = "Select font size (16):";
 fontSizeSliderLabel.htmlFor = "fontSizeSlider";
 
 // Make a slider for the font size
@@ -94,6 +92,8 @@ backColorInput.id = "backColorInput";
 backColorInput.type = "color";
 
 // append
+footer.appendChild(elementMenuLabel);
+footer.appendChild(elementMenu);
 footer.appendChild(fontSelectLabel);
 footer.appendChild(fontSelect);
 footer.appendChild(fontSizeSliderLabel);
@@ -105,14 +105,18 @@ footer.appendChild(backColorInput);
 
 // function to apply selected options
 function applyChanges() {
-    const element = document.getElementById(elementMenu.value);
-    element.style.fontFamily = fontSelect.value;
-    element.style.fontSize = fontSizeSlider.value;
-    element.style.color = fontColorInput.value;
-    element.style.backgroundColor = backColorInput.value;
+    selectedElement = document.getElementById(elementMenu.value);
+    selectedElement.style.fontFamily = fontSelect.value;
+    selectedElement.style.fontSize = fontSizeSlider.value;
+    fontSizeSliderLabel.textContent = "Select font size (${fontSizeSlider.value}):";
+    selectedElement.style.color = fontColorInput.value;
+    selectedElement.style.backgroundColor = backColorInput.value;
+    console.log("changes applied")
 }
 
 // button to apply changes
 applyButton = document.createElement("button");
 applyButton.textContent = "Apply changes";
 applyButton.addEventListener("click",applyChanges);
+
+footer.appendChild(applyButton);

@@ -147,6 +147,9 @@ footer {
     background-color: lightblue;
     margin-top: 50px;
     padding: 10px 30px;
+}
+
+.footer-base {
     display: flex;
     justify-content: space-between;
 }
