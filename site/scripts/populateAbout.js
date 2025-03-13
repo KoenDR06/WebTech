@@ -62,8 +62,8 @@ class Student extends Person {
     get quote() {return this.#quote}
 
     set age(value) {
-        if (!value instanceof Integer || //Check of goed is.
-            !(value > 0 && value < 90 ) ) return;
+        if (!Number.isInteger(value) || //Check of goed is.
+            value < 0 || value > 90 ) return;
         this.#age = value;
     }
 
@@ -74,8 +74,8 @@ class Student extends Person {
     }
 
     set hobbies(value) {
-        if (!value instanceof array ||
-            value === "") return;
+        if (!Array.isArray(value) ||
+            value.some(item => !item instanceof String || item === "")) return;
         this.#hobbies = value;
     }
 
@@ -92,8 +92,8 @@ class Student extends Person {
     }
 
     set courses(value) {
-        if (!value instanceof String ||
-            value === "") return;
+        if (!Array.isArray(value) ||
+            value.some(item => !item instanceof String || item === "")) return;
         this.#courses = value;
     }
 
