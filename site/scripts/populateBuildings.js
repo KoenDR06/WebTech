@@ -1,4 +1,21 @@
 class Building {
+    #abbr;
+    #id;
+    #name;
+    #mapsURL;
+    #address;
+
+    #telephone;
+
+    #monday;
+    #tuesday;
+    #wednesday;
+    #thursday;
+    #friday;
+    #saturday;
+    #sunday;
+    #hasOpeningTimes;
+
     constructor(json) {
         this.abbr = json.abbr;
         this.id = json.id;
@@ -16,6 +33,78 @@ class Building {
         this.saturday = json.saturday;
         this.sunday = json.sunday;
         this.hasOpeningTimes = !!json.monday // If the entry for monday exists, the rest also exists
+    }
+
+    get abbr() {return this.#abbr;}
+    get id() {return this.#id;}
+    get name() {return this.#name;}
+    get mapsURL() {return this.#mapsURL;}
+    get address() {return this.#address;}
+    get telephone() {return this.#telephone;}
+    get monday() {return this.#monday;}
+    get tuesday() {return this.#tuesday;}
+    get wednesday() {return this.#wednesday;}
+    get thursday() {return this.#thursday;}
+    get friday() {return this.#friday;}
+    get saturday() {return this.#saturday;}
+    get sunday() {return this.#sunday;}
+    get hasOpeningTimes() {return this.#hasOpeningTimes;}
+
+    set abbr(value) {
+        if (!value instanceof String) return;
+        this.#abbr = value;
+    }
+    set id(value) {
+        if (!value instanceof String || value === "") return;
+        this.#id = value;
+    }
+    set name(value) {
+        if (!value instanceof String || value === "") return;
+        this.#name = value;
+    }
+    set mapsURL(value) {
+        if (!value instanceof String || value === "") return;
+        this.#mapsURL = value;
+    }
+    set address(value) {
+        if (!value instanceof String || value === "") return;
+        this.#address = value;
+    }
+    set telephone(value) {
+        if (!value instanceof String || value === "") return;
+        this.#telephone = value;
+    }
+    set monday(value) {
+        if (!value instanceof String || value === "") return;
+        this.#monday = value;
+    }
+    set tuesday(value) {
+        if (!value instanceof String || value === "") return;
+        this.#tuesday = value;
+    }
+    set wednesday(value) {
+        if (!value instanceof String || value === "") return;
+        this.#wednesday = value;
+    }
+    set thursday(value) {
+        if (!value instanceof String || value === "") return;
+        this.#thursday = value;
+    }
+    set friday(value) {
+        if (!value instanceof String || value === "") return;
+        this.#friday = value;
+    }
+    set saturday(value) {
+        if (!value instanceof String || value === "") return;
+        this.#saturday = value;
+    }
+    set sunday(value) {
+        if (!value instanceof String || value === "") return;
+        this.#sunday = value;
+    }
+    set hasOpeningTimes(value) {
+        if (!value instanceof Boolean) return;
+        this.#hasOpeningTimes = value;
     }
 }
 

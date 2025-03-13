@@ -79,13 +79,13 @@ class Student extends Person {
     }
 
     set photo(value) {
-        if (!value instanceof String || //Done
+        if (!value instanceof String ||
             value === "") return;
         this.#photo = value;
     }
 
     set major(value) {
-        if (!value instanceof String || //Done
+        if (!value instanceof String ||
             value === "") return;
         this.#major = value;
     }
@@ -97,7 +97,7 @@ class Student extends Person {
     }
 
     set quote(value) {
-        if (!value instanceof String || //Done
+        if (!value instanceof String ||
             value === "") return;
         this.#quote = value;
     }
