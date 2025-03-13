@@ -43,7 +43,7 @@ h3 {
     font-weight: bolder;
 }
 
-.obuildings__opening-hours-table th {
+.buildings__opening-hours-table th {
     text-align: right;
 }
 
@@ -62,6 +62,10 @@ h3 {
     border: solid 2px black;
     width: 200px;
     height: 200px;
+}
+
+.team-member__quote {
+    width: 204px;
 }
 
 .team-member__text {
