@@ -32,7 +32,7 @@ class Building {
         this.friday = json.friday;
         this.saturday = json.saturday;
         this.sunday = json.sunday;
-        this.hasOpeningTimes = !!json.monday // If the entry for monday exists, the rest also exists
+        this.hasOpeningTimes = !!json.monday; // If the entry for monday exists, the rest also exists
     }
 
     get abbr() {return this.#abbr;}

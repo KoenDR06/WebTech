@@ -78,7 +78,7 @@ const fontColorInputLabel = document.createElement("label");
 fontColorInputLabel.textContent = "Select font color:";
 fontColorInputLabel.htmlFor = "fontColorInput";
 
-// Make options for font color 
+// Make options for font color
 const fontColorInput = document.createElement("input");
 fontColorInput.id = "fontColorInput";
 fontColorInput.type = "color";

@@ -9,9 +9,9 @@ class Person {
         this.title = json.title ? json.title : "";
     }
 
-    get firstName() {return this.#firstName}
-    get lastName() {return this.#lastName}
-    get title() {return this.#title}
+    get firstName() {return this.#firstName;}
+    get lastName() {return this.#lastName;}
+    get title() {return this.#title;}
 
     set firstName(value) {
         if (!value instanceof String ||
@@ -115,7 +115,6 @@ function populate(event) {
     reader.onload = () => {
         const json = JSON.parse(reader.result);
         const students = json.students.map( (person) => new Student(person) );
-        const courses = json.courses;
         const teachers = json.teachers.map( (teacher) => new Person(teacher) );
 
         for (let student of students) {
@@ -209,18 +208,19 @@ function populate(event) {
             // Courses
             const courses = document.createElement("p");
             const boldCourses = document.createElement("b");
-            boldCourses.innerText = "Courses: ";
+            boldCourses.innerText = "Took courses: ";
             courses.appendChild(boldCourses);
 
             const courseList = document.createElement("ul");
-            for (let course of student.courses) {
-                const li = document.createElement("li");
-                li.appendChild(document.createTextNode(course));
-                courseList.appendChild(li);
-            }
+            for (let courseCode of student.courses) {
+                const course = json.courses[courseCode];
 
-            // Quote
-            // Vergeet de quote niet!
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(course.name));
+                courseList.appendChild(li);
+
+                li.setAttribute("title", `Course code: ${courseCode}\nTeacher(s): ${course.teacher}\nDescription: ${course.description}`);
+            }
 
             personalInfoDiv.appendChild(age);
             personalInfoDiv.appendChild(major);
@@ -229,7 +229,6 @@ function populate(event) {
             personalInfoDiv.appendChild(hobbyList);
             personalInfoDiv.appendChild(courses);
             personalInfoDiv.appendChild(courseList)
-            // Vergeet de quote niet!
 
             aboutContainer.appendChild(section);
         }

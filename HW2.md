@@ -1,36 +1,39 @@
 # HW2
  
-Develop a dynamic version of the website created in Assignment 1 using JavaScript (if necessary, you can change/extend the main theme). Use DOM methods, nodes, properties and events to interactively modify the content and appearance of your web pages according to user actions. Use event listeners to process the events. Implement at least 1 case of event propagation (W3C model).
+Develop a dynamic version of the website created in Assignment 1 using JavaScript (if necessary, you can change/extend the main theme). Use DOM methods, nodes, properties and events to interactively modify the content and appearance of your web pages according to user actions.
+
+- [ ] Use event listeners to process the events.
+- [ ] Implement at least 1 case of event propagation (W3C model).
 
 ## From HW1:
 - [X] Modify the pages about the members of your group in such as a way that the main content of the pages is constructed dynamically purely through DOM manipulation (not document.write(), not .innerHTML) from the JSON files you prepare. 
 - [X] Such elements as `<nav>`, `<header>`, `<footer>` and `<aside>` can still be a part of the corresponding html files, but all the main content of the pages has to be produced by JavaScript on the fly. 
 - [X] To load the content, you should use the FileReader interface and the `<input type="file">` element. 
 - [X] These pages should be originally empty and contain the `<input type="file">` interfaces (with the explanations which files to load)
-- [ ] After reading JSON file you need to create object-oriented structured descriptions of the members of your group, and then use it to populate the content of the pages.
+- [X] After reading JSON file you need to create object-oriented structured descriptions of the members of your group, and then use it to populate the content of the pages.
 
 ## Classes we need to use:
 Class Person:
-- [ ] firstName (String)
-- [ ] lastName(String)
+- [X] firstName (String)
+- [X] lastName(String)
  
 Class Student: extend Person
-- [ ] age (Number)
-- [ ] hobbies: (Array of Strings)
-- [ ] email (String)
-- [ ] photo (String): link to a file with a photo
-- [ ] major (String) // university program
-- [ ] courses (Array of Courses)
+- [X] age (Number)
+- [X] hobbies: (Array of Strings)
+- [X] email (String)
+- [X] photo (String): link to a file with a photo
+- [X] major (String) // university program
+- [X] courses (Array of Courses)
  
 Class Course:
-- [ ] title (String)
-- [ ] teacher (Person)
-- [ ] description (String)
+- [X] title (String)
+- [X] teacher (Person)
+- [X] description (String)
 
 ## Elements to be implemented:
 - [ ] Use ES6 classes and ES6-style object construction.
-- [ ] Use private fields, getters and setters. Make sure that setters control that only correct data can be set into the corresponding data fields (think of the rules for names, emails, links images, ages, etc.).
-- [ ] The users should be able to mouseover the list of courses and see their extended information in a tooltip.
+- [X] Use private fields, getters and setters. Make sure that setters control that only correct data can be set into the corresponding data fields (think of the rules for names, emails, links images, ages, etc.).
+- [X] The users should be able to mouseover the list of courses and see their extended information in a tooltip.
 - [ ] Implement two menus in your <header> or <footer> that allow the user to dynamically change the appearance of elements on a page.
 - [ ] One menu should be used to select an element, another to modify the selected element appearance. The options of the first menu should contain at least body, articles and sections. The options should be created on the fly by traversing the DOM of the page. (A page can have more than one article and more than one section, and not necessarily have an aside, but the menu should be able to read them correctly from the DOM of the page.)
 - [ ] The options of the second menu should allow to change at least the font size and the font color of the selected elements. To implement menus you can use the HTML Select element.
@@ -41,14 +44,14 @@ These pages explain how you can create and manipulate the Select element and its
 
 ## Important rules to keep in mind:
 - [ ] The website should continue following the principles of responsive design and accessibility.
-- [ ] Do not use external libraries and frameworks.
+- [X] Do not use external libraries and frameworks.
 - [ ] Maintain good coding style.
 - [ ] In addition to the good coding style rules specified in Assignment 1:
-	- [ ]  Separate scripting from the content.
-	- [ ]  Use camelCase notation when naming your methods, variables and classes.
-	- [ ]  Use indentation when writing your JavaScript code.
-	- [ ]  Use meaningful comments.
-	- [ ]  Terminate JavaScript statements with a ";".
+	- [X;] Separate scripting from the content.
+	- [X] Use camelCase notation when naming your methods, variables and classes.
+	- [X] Use indentation when writing your JavaScript code.
+	- [X] Use meaningful comments.
+	- [X] Terminate JavaScript statements with a ";".
 
 ## Procedure
 - [ ] Complete and submit your website in groups.
