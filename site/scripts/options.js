@@ -95,18 +95,21 @@ footer.appendChild(backColorInput);
 
 // function to apply selected options
 function applyChanges() {
-    selectedElement = document.getElementById(elementMenu.selectedOptions[0].label);
+    const selectedElement = document.getElementById(elementMenu.selectedOptions[0].label);
     selectedElement.style.fontFamily = fontSelect.selectedOptions[0].label;
     selectedElement.style.fontSize = fontSizeSlider.value + "px";
     fontSizeSliderLabel.textContent = `Select font size (${fontSizeSlider.value}):`;
     selectedElement.style.color = fontColorInput.value;
     selectedElement.style.backgroundColor = backColorInput.value;
-    console.log("changes applied")
+
+    for (let element of document.querySelectorAll("section.scroll-target section.team-member")) {
+        if (element.style.maxHeight) element.style.maxHeight = element.scrollHeight + "px";
+    }
 }
 
 // button to apply changes
 applyButton = document.createElement("button");
 applyButton.textContent = "Apply changes";
-applyButton.addEventListener("click",applyChanges);
+applyButton.addEventListener("click", applyChanges);
 
 footer.appendChild(applyButton);
