@@ -2,7 +2,7 @@
  
 Develop a dynamic version of the website created in Assignment 1 using JavaScript (if necessary, you can change/extend the main theme). Use DOM methods, nodes, properties and events to interactively modify the content and appearance of your web pages according to user actions.
 
-- [ ] Use event listeners to process the events.
+- [X] Use event listeners to process the events.
 - [ ] Implement at least 1 case of event propagation (W3C model).
 
 ## From HW1:
@@ -31,23 +31,23 @@ Class Course:
 - [X] description (String)
 
 ## Elements to be implemented:
-- [ ] Use ES6 classes and ES6-style object construction.
+- [X] Use ES6 classes and ES6-style object construction.
 - [X] Use private fields, getters and setters. Make sure that setters control that only correct data can be set into the corresponding data fields (think of the rules for names, emails, links images, ages, etc.).
 - [X] The users should be able to mouseover the list of courses and see their extended information in a tooltip.
-- [ ] Implement two menus in your <header> or <footer> that allow the user to dynamically change the appearance of elements on a page.
-- [ ] One menu should be used to select an element, another to modify the selected element appearance. The options of the first menu should contain at least body, articles and sections. The options should be created on the fly by traversing the DOM of the page. (A page can have more than one article and more than one section, and not necessarily have an aside, but the menu should be able to read them correctly from the DOM of the page.)
-- [ ] The options of the second menu should allow to change at least the font size and the font color of the selected elements. To implement menus you can use the HTML Select element.
+- [X] Implement two menus in your <header> or <footer> that allow the user to dynamically change the appearance of elements on a page.
+- [X] One menu should be used to select an element, another to modify the selected element appearance. The options of the first menu should contain at least body, articles and sections. The options should be created on the fly by traversing the DOM of the page. (A page can have more than one article and more than one section, and not necessarily have an aside, but the menu should be able to read them correctly from the DOM of the page.)
+- [X] The options of the second menu should allow to change at least the font size and the font color of the selected elements. To implement menus you can use the HTML Select element.
 
 These pages explain how you can create and manipulate the Select element and its properties:
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
 - https://www.w3schools.com/jsref/dom_obj_select.asp
 
 ## Important rules to keep in mind:
-- [ ] The website should continue following the principles of responsive design and accessibility.
+- [X] The website should continue following the principles of responsive design and accessibility.
 - [X] Do not use external libraries and frameworks.
-- [ ] Maintain good coding style.
-- [ ] In addition to the good coding style rules specified in Assignment 1:
-	- [X;] Separate scripting from the content.
+- [X] Maintain good coding style.
+- [X] In addition to the good coding style rules specified in Assignment 1:
+	- [X] Separate scripting from the content.
 	- [X] Use camelCase notation when naming your methods, variables and classes.
 	- [X] Use indentation when writing your JavaScript code.
 	- [X] Use meaningful comments.
