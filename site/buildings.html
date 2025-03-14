@@ -14,7 +14,7 @@
     <title>Buildings of the UU campus</title>
   </head>
 
-  <body>
+  <body id="body">
     <header>
       <img src="static/images/favicon.ico" alt="Picture of the team" class="header__picture">
       <p>Interactive Informatics Information Page</p>
@@ -60,6 +60,23 @@
         <a href="https://youtube.com" target="_blank"><img src="static/images/youtube.svg" alt="YouTube logo"></a>
         <a href="https://instagram.com" target="_blank"><img src="static/images/instagram.svg" alt="Instagram logo"></a>
       </div>
+      </div>
+      <div class="footer__options" id="footer__options">
+        <label for="footer__element-menu">Select element to be modified:</label>
+        <select id="footer__element-menu" name="footer__element-menu">
+          
+        </select><br>
+        <label for="footer__font-select">Select font:</label>
+        <select id="footer__font-select" name="footer__font-select">
+    
+        </select><br>
+        <label id="footer__font-size-input-label" for="footer__font-size-slider">Select font size (16):</label>
+        <input id="footer__font-size-slider" name="footer__font-size-slider" type="range" min="8" max="24" value="16"><br>
+        <label for="footer__font-color-input">Select font color:</label>
+        <input id="footer__font-color-input" name="footer__font-color-input" type="color"><br>
+        <label for="footer__back-color-input">Select background color:</label>
+        <input id="footer__back-color-input" name="footer__back-color-input" type="color" value="#ffffff"><br>
+        <button id="footer__button" type="button">Apply changes</button>
     </div>
     </footer>
   </body>
