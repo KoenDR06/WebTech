@@ -4,19 +4,13 @@
 // Options: body, articles and sections
 // use dom to find options
 
-// Make label for elementMenu
-const elementMenuLabel = document.createElement("label");
-elementMenuLabel.textContent = "Select element to be modified:";
-elementMenuLabel.htmlFor = "element-menu";
-
 // Find all the needed elements
-const elementMenu = document.createElement("select");
-elementMenu.id = "element-menu";
 const body = document.querySelector("body");
 const options = document.querySelectorAll("article, section, aside");
 const footer = document.querySelector("footer");
 
 // Add all the options for the elements for the elementMenu
+const elementMenu = document.getElementById("footer__element-menu");
 const bodyElement = document.createElement("option");
 bodyElement.label = "body";
 elementMenu.appendChild(bodyElement);
@@ -30,14 +24,8 @@ for (let i = 0; i < options.length; i++) {
 // Change the font size
 // Change the font color
 
-// Make label for fontSelect
-const fontSelectLabel = document.createElement("label");
-fontSelectLabel.textContent = "Select font:";
-fontSelectLabel.htmlFor = "font-select";
-
 // Make list of fonts and add them as options
-const fontSelect = document.createElement("select");
-fontSelect.id = "font-select";
+const fontSelect = document.getElementById("footer__font-select");
 const fontList = ["Arial", "Verdana", "Helvetica",
     "Times New Roman", "Georgia", "Garamond",
     "Courier New", "Lucida Console", "Monaco"];
@@ -47,51 +35,10 @@ for (let i = 0; i < fontList.length; i++) {
     fontSelect.appendChild(font);
 }
 
-// Make label for fontSizeSlider
-const fontSizeSliderLabel = document.createElement("label");
-fontSizeSliderLabel.textContent = "Select font size (16):";
-fontSizeSliderLabel.htmlFor = "font-size-slider";
-
-// Make a slider for the font size
-const fontSizeSlider = document.createElement("input");
-fontSizeSlider.id = "font-size-slider";
-fontSizeSlider.type = "range";
-fontSizeSlider.min = 8;
-fontSizeSlider.max = 24;
-fontSizeSlider.value = 16;
-
-// Make label for fontColorInput
-const fontColorInputLabel = document.createElement("label");
-fontColorInputLabel.textContent = "Select font color:";
-fontColorInputLabel.htmlFor = "font-color-input";
-
-// Make options for font color
-const fontColorInput = document.createElement("input");
-fontColorInput.id = "font-color-input";
-fontColorInput.type = "color";
-
-// Make label for backColorInput
-const backColorInputLabel = document.createElement("label");
-backColorInputLabel.textContent = "Select background color:";
-backColorInputLabel.htmlFor = "back-color-input";
-
-// Make options for background color
-const backColorInput = document.createElement("input");
-backColorInput.id = "back-color-input";
-backColorInput.type = "color";
-backColorInput.value = "#ffffff";
-
-// append
-footer.appendChild(elementMenuLabel);
-footer.appendChild(elementMenu);
-footer.appendChild(fontSelectLabel);
-footer.appendChild(fontSelect);
-footer.appendChild(fontSizeSliderLabel);
-footer.appendChild(fontSizeSlider);
-footer.appendChild(fontColorInputLabel);
-footer.appendChild(fontColorInput);
-footer.appendChild(backColorInputLabel);
-footer.appendChild(backColorInput);
+const fontSizeSliderLabel = document.getElementById("footer__font-size-input-label");
+const fontSizeSlider = document.getElementById("footer__font-size-slider");
+const fontColorInput = document.getElementById("footer__font-color-input");
+const backColorInput = document.getElementById("footer__back-color-input");
 
 // function to apply selected options
 function applyChanges() {
@@ -108,8 +55,5 @@ function applyChanges() {
 }
 
 // button to apply changes
-applyButton = document.createElement("button");
-applyButton.textContent = "Apply changes";
+applyButton = document.getElementById("footer__button");
 applyButton.addEventListener("click", applyChanges);
-
-footer.appendChild(applyButton);
