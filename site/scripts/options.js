@@ -13,28 +13,16 @@ elementMenuLabel.htmlFor = "element-menu";
 const elementMenu = document.createElement("select");
 elementMenu.id = "element-menu";
 const body = document.querySelector("body");
-const articleList = document.querySelectorAll("article");
-const sectionList = document.querySelectorAll("section");
-const asideList = document.querySelectorAll("aside");
+const options = document.querySelectorAll("article, section, aside");
 const footer = document.querySelector("footer");
 
 // Add all the options for the elements for the elementMenu
-let element = document.createElement("option");
-element.label = body.id;
-elementMenu.appendChild(element);
-for (let i = 0; i < articleList.length; i++) {
-    element = document.createElement("option");
-    element.label = articleList[i].id;
-    elementMenu.appendChild(element);
-}
-for (let i = 0; i < sectionList.length; i++) {
-    element = document.createElement("option");
-    element.label = sectionList[i].id;
-    elementMenu.appendChild(element);
-}
-for (let i = 0; i < asideList.length; i++) {
-    element = document.createElement("option");
-    element.label = asideList[i].id;
+const bodyElement = document.createElement("option");
+bodyElement.label = "body";
+elementMenu.appendChild(bodyElement);
+for (let i = 0; i < options.length; i++) {
+    const element = document.createElement("option");
+    element.label = options[i].id;
     elementMenu.appendChild(element);
 }
 
