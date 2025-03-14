@@ -39,15 +39,28 @@ const fontSizeSlider = document.getElementById("footer__font-size-slider");
 const fontColorInput = document.getElementById("footer__font-color-input");
 const backColorInput = document.getElementById("footer__back-color-input");
 
+function clearOldChanges(parent) {
+    for (let child of parent.children){
+        child.style = "";
+        if (child.firstChild) {
+            clearOldChanges(child);
+        }
+    }
+}
+
 // function to apply selected options
 function applyChanges() {
     const selectedElement = document.getElementById(elementMenu.selectedOptions[0].label);
-    selectedElement.style.fontFamily = fontSelect.selectedOptions[0].label;
-    selectedElement.style.fontSize = fontSizeSlider.value + "px";
-    fontSizeSliderLabel.textContent = `Select font size (${fontSizeSlider.value}):`;
-    selectedElement.style.color = fontColorInput.value;
-    selectedElement.style.backgroundColor = backColorInput.value;
 
+    clearOldChanges(selectedElement);
+
+    fontSizeSliderLabel.textContent = `Select font size (${fontSizeSlider.value}):`;
+    selectedElement.style.setProperty("fontFamily", fontSelect.selectedOptions[0].label, "important");
+    selectedElement.style.setProperty("fontSize", fontSizeSlider.value + "px", "important");
+    selectedElement.style.setProperty("color", fontColorInput.value, "important");
+    selectedElement.style.setProperty("backgroundColor", backColorInput.value, "important");
+
+    // Resize the collapsible sections
     for (let element of document.querySelectorAll("section.scroll-target section.team-member")) {
         if (element.style.maxHeight) element.style.maxHeight = element.scrollHeight + "px";
     }
