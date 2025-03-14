@@ -115,7 +115,6 @@ function populate(event) {
     reader.onload = () => {
         const json = JSON.parse(reader.result);
         const students = json.students.map( (person) => new Student(person) );
-        const teachers = json.teachers.map( (teacher) => new Person(teacher) );
 
         for (let student of students) {
             /* ---- Main Content ---- */

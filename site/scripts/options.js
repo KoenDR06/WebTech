@@ -7,7 +7,6 @@
 // Find all the needed elements
 const body = document.querySelector("body");
 const options = document.querySelectorAll("article, section, aside");
-const footer = document.querySelector("footer");
 
 // Add all the options for the elements for the elementMenu
 const elementMenu = document.getElementById("footer__element-menu");
@@ -30,7 +29,7 @@ const fontList = ["Arial", "Verdana", "Helvetica",
     "Times New Roman", "Georgia", "Garamond",
     "Courier New", "Lucida Console", "Monaco"];
 for (let i = 0; i < fontList.length; i++) {
-    font = document.createElement("option");
+    const font = document.createElement("option");
     font.label = fontList[i];
     fontSelect.appendChild(font);
 }
