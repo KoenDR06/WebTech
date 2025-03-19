@@ -5,7 +5,7 @@ CREATE TABLE "Courses"
             primary key autoincrement,
     major_id integer not null,
     name     text    not null
-)
+);
 
 CREATE TABLE "Friends"
 (
@@ -21,7 +21,7 @@ CREATE TABLE "Friends"
             primary key autoincrement,
     constraint users
         unique (user_a_id, user_b_id)
-)
+);
 
 CREATE TABLE Majors
 (
@@ -29,7 +29,7 @@ CREATE TABLE Majors
         constraint id
             primary key autoincrement,
     name text    not null
-)
+);
 
 CREATE TABLE Messages
 (
@@ -44,9 +44,7 @@ CREATE TABLE Messages
     friend_id integer not null
         constraint friend_id
             references Friends (id)
-)
-
-CREATE TABLE sqlite_sequence(name,seq)
+);
 
 CREATE TABLE User_Courses
 (
@@ -54,7 +52,7 @@ CREATE TABLE User_Courses
     course_id integer not null,
     constraint id
         primary key (user_id, course_id)
-)
+);
 
 CREATE TABLE "Users"
 (
@@ -69,4 +67,5 @@ CREATE TABLE "Users"
         constraint major_id
             references Majors,
     hobbies    text    not null
-    , photo_path text not null)
+    , photo_path text not null
+)
