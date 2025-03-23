@@ -20,23 +20,25 @@
             <a href="login.html" class="log-in" id="header__log-in">Log in</a>
         </header>
         
+        <main>
+
         <h1>Register page</h1>
 
-        <form class="Register-form">
+        <form class="register-form" id="register-form">
             <label for="fname">First name:</label><br>
-            <input type="text" name="fname" id="form__fname"><br><br>
+            <input type="text" name="fname" id="form__fname" required><br><br>
 
             <label for="iname">Infix:</label><br>
             <input type="text" name="iname" id="form__iname"><br><br>
 
             <label for="lname">Last name:</label><br>
-            <input type="text" name="lname" id="form__lname"><br><br>
+            <input type="text" name="lname" id="form__lname" required><br><br>
 
             <label for="birthday">Date of birth:</label><br>
-            <input type="date" name="birthday" id="form__birthday"><br><br>
+            <input type="date" name="birthday" id="form__birthday" required><br><br>
 
             <label for="email">E-mail: </label><br>
-            <input type="email" name="email" id="form__email"><br><br>
+            <input type="email" name="email" id="form__email" required><br><br>
 
             <!-- photo, check the file type -->
             <label for="profilepicture">Profile picture:</label><br>
@@ -59,15 +61,19 @@
 
             <!-- password -->
             <label for="password">Password:</label><br>
-            <input type="password" name="password" id="form__password"><br>
+            <input type="password" name="password" id="form__password" required><br>
 
             <label for="confirmpassword">Confirm password:</label><br>
-            <input type="password" name="confirmpassword" id="form__confirmpassword"><br><br>
+            <input type="password" name="confirmpassword" id="form__confirmpassword" required><br><br>
 
-            <input type="submit" value="Register">
+            <div id="fomr__error"></div>
+
+            <input type="submit" value="Register" id="form__submit">
 
             <input type="button" value="Back" onclick="window.location.href='login.html';">
         </form>
+
+        </main>
 
         <footer>
             <div class="footer-base">

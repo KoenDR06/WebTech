@@ -82,6 +82,13 @@ h3 {
 }
 
 
+/* register */
+
+#form__entered-hobbies > p, #form__entered-courses > p {
+  margin: 0;
+}
+
+
 /* header */
 
 header {
