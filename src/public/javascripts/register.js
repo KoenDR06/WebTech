@@ -1,5 +1,7 @@
 // find elements of hobbies and courses
 
+console.log("register.js")
+
 const fname = document.getElementById("form__fname");
 const iname = document.getElementById("form__iname");
 const lname = document.getElementById("form__lname");
@@ -43,41 +45,88 @@ function saveCourse() {
 enterCourse.addEventListener("click", saveCourse);
 
 const password = document.getElementById("form__password");
-const confirmpassword = document.getElementById("confirmpassword");
+const confirmPassword = document.getElementById("form__confirm-password");
 
 const error = document.getElementById("form__error");
 const submitb = document.getElementById("form__submit");
 
-/*
-function submitf() {
-    // check names 
-    // check birthday < today
-    var todaysDate = new Date();
-    console.log(birthday.value);
-    console.log(todaysDate);
-    if (birthday.value === todaysDate) {
-        console.log("incorrect date");
-    }
-    // check profilepicture is image
-    // all entered hobbies and courses put in seperate lists
-    // send all information
-    console.log("submitted");
-}
-submitb.addEventListener("submit", submitf);
-*/
+// Taken from: 
+// https://stackoverflow.com/questions/23593052/format-javascript-date-as-yyyy-mm-dd
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
 
-submitb.addEventListener("submit", e => {
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
+// Taken from:
+// https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
+function validateEmail(email) {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  }
+
+submitb.addEventListener("click", e => {
     let errorMessage = []
     if (fname.value == '' || fname.value == null){
-        errorMessage.push("First name is required");
+        errorMessage.push("First name is required.");
+    }
+
+    if (lname.value == '' || lname.value == null){
+        errorMessage.push("Last name is required.");
+    }
+
+    console.log(birthday.value);
+    const todaysDateAndTime = new Date();
+    todaysDate = formatDate(todaysDateAndTime);
+    console.log(todaysDate);
+
+    if (birthday.value == '' || birthday.value == null) {
+        errorMessage.push("Birthday is required.")
+    }
+    else if (todaysDate.localeCompare(birthday.value) === -1) {
+        errorMessage.push("Birthday can not be in the future.");
+    }
+
+    // Check email is not null
+
+    if (!validateEmail(email.value)){
+        errorMessage.push("Invalid email.");
+    }
+    else {
+        // Check if email is in database
     }
 
     if (password.value.length < 8){
-        errorMessage.push("Password must be at least 8 characters long");
+        errorMessage.push("Password must be at least 8 characters long.");
+    }
+
+    if (password.value != confirmPassword.value){
+        errorMessage.push("Password is not correctly confirmed.");
     }
 
     if (errorMessage.length > 0){
         e.preventDefault();
-        error.innerText = errorMessage.join(", ");
+        const oldErrorP = document.getElementById("form__error-p");
+        const newErrorP = document.createElement("p");
+        const errorText = document.createTextNode("Error: " + errorMessage.join(" "));
+        newErrorP.appendChild(errorText);
+        error.appendChild(newErrorP);
+        oldErrorP.remove();
+        newErrorP.setAttribute("id", "form__error-p");
+    }
+    else if (errorMessage.length == 0){
+        // hash password
+        // send information to database to be stored
     }
 });
