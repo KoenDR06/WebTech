@@ -9,6 +9,7 @@ dotenv.config();
 
 const port = process.env.PORT;
 const app = express();
+app.set('view engine', 'jade');
 
 // --- Middleware ---
 app.use(morgan('dev'));
