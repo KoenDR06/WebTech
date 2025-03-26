@@ -1,15 +1,19 @@
 import express, { NextFunction } from 'express';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
-
-import { webRouter } from './routing/web';
 import * as dotenv from 'dotenv';
+import hbs from 'express-handlebars';
+import { webRouter } from './routing/web';
 
 dotenv.config();
 
 const port = process.env.PORT;
 const app = express();
-app.set('view engine', 'jade');
+
+// --- Templating ---
+app.set('view engine', 'hbs');
+app.set('views', 'src/views');
+app.engine('hbs', hbs.engine({ extname: 'hbs' }));
 
 // --- Middleware ---
 app.use(morgan('dev'));

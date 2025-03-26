@@ -5,6 +5,8 @@
         "debug": "~2.6.9",
         "dotenv": "^16.4.7",
         "express": "^5.0.1",
+        "express-handlebars": "^8.0.1",
+        "hbs": "^4.2.0",
         "http-errors": "~1.6.3",
         "jade": "^0.29.0",
         "morgan": "^1.10.0",

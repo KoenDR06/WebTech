@@ -2,6 +2,10 @@ import express, { Request, Response } from 'express';
 
 export const webRouter = express.Router();
 
-webRouter.route('/').get((req: Request, res: Response) => {
-    res.json({ message: 'Welcome to the Express + TypeScript Server!' });
+webRouter.get('/register', async (req: Request, res: Response) => {
+    res.render('register', { title: 'Register' });
+});
+
+webRouter.get('/login', async (req: Request, res: Response) => {
+    res.render('login', { title: 'Login' });
 });
