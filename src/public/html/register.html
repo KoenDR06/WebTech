@@ -1,107 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-
-        <link rel="stylesheet" href="../stylesheets/style.css">
-        <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-
-        <script src="../javascripts/options.js" defer></script>
-        <script src="../javascripts/register.js" defer></script>
-
+        <meta charset="utf-8" />
         <title>Login</title>
     </head>
 
     <body>
-        <header>
-            <img src="../images/favicon.ico" alt="Picture of the team" class="header__picture">
-            <p>Interactive Informatics Information Page</p>
-            <a href="login.html" class="log-in" id="header__log-in">Log in</a>
-        </header>
-        
-        <main>
-
         <h1>Register page</h1>
 
-        <form class="register-form" id="register-form">
-            <label for="fname">First name:</label><br>
-            <input type="text" name="fname" id="form__fname" required><br><br>
+        <form>
+            <label for="firstname">First name:</label><br />
+            <input type="text" name="firstname" /><br />
 
-            <label for="iname">Infix:</label><br>
-            <input type="text" name="iname" id="form__iname"><br><br>
+            <label for="infixname">Infix:</label><br />
+            <input type="text" name="infixname" /><br />
 
-            <label for="lname">Last name:</label><br>
-            <input type="text" name="lname" id="form__lname" required><br><br>
+            <label for="lastname">Last name:</label><br />
+            <input type="text" name="lastname" /><br />
 
-            <label for="birthday">Date of birth:</label><br>
-            <input type="date" name="birthday" id="form__birthday" required><br><br>
+            <label for="birthday">Date of birth:</label><br />
+            <input type="date" name="birthday" /><br />
 
-            <label for="email">E-mail: </label><br>
-            <input type="email" name="email" id="form__email" required><br><br>
+            <label for="email">E-mail: </label><br />
+            <input type="email" name="email" /><br />
 
-            <!-- photo, check the file type -->
-            <label for="profilepicture">Profile picture:</label><br>
-            <input type="file" name="profilepicture" id="form__profilepicture"><br><br>
+            <label for="profilepicture">Profile picture:</label><br />
+            <input type="image" name="profilepicture" /><br />
 
-            <label for="programmajor">Program/ major:</label><br>
-            <input type="text" name="programmajor" id="form__programmajor"><br><br>
+            <label for="programmajor">Program/ major:</label><br />
+            <input type="text" name="programmajor" /><br />
 
             <!-- list of hobbies, not text -->
-            <label for="hobbies">Hobbies:</label><br>
-            <div id="form__entered-hobbies"></div>
-            <input type="text" name="hobbies" id="form__hobby">
-            <input type="button" name="enter-hobby" id="form__enter-hobby" value="Enter hobby"><br><br>
+            <label for="hobbies">Hobbies:</label><br />
+            <input type="text" name="hobbies" /><br />
 
             <!-- list of courses, not text -->
-            <label for="courses">Taken courses:</label><br>
-            <div id="form__entered-courses"></div>
-            <input type="text" name="courses" id="form__course">
-            <input type="button" name="enter-course" id="form__enter-course" value="Enter course"><br><br>
+            <label for="courses">Taken courses:</label><br />
+            <input type="text" name="courses" /><br />
 
             <!-- password -->
-            <label for="password">Password:</label><br>
-            <input type="password" name="password" id="form__password" required><br>
+            <label for="password">Password:</label><br />
+            <input type="password" name="password" /><br />
 
-            <label for="confirm-password">Confirm password:</label><br>
-            <input type="password" name="confirm-password" id="form__confirm-password" required><br><br>
+            <label for="confirmpassword">Confirm password:</label><br />
+            <input type="password" name="confirmpassword" /><br />
+            <br />
 
-            <div id="form__error"><p id="form__error-p"></p></div>
+            <input type="submit" value="Register" />
 
-            <input type="button" value="Register" id="form__submit">
-
-            <input type="button" value="Back" onclick="window.location.href='login.html';">
+            <input
+                type="button"
+                value="Back"
+                onclick="window.location.href='login.html';"
+            />
         </form>
-
-        </main>
-
-        <footer>
-            <div class="footer-base">
-            <p><i>Copyright 2025: Bas Lodewijk, ing. Kitty van der Heyden, Koen de Ruiter</i></p>
-            <div class="footer__logos">
-              <a href="https://bsky.app" target="_blank"><img src="../images/bluesky.svg" alt="BlueSky logo" class="footer__logos--small"></a>
-              <a href="https://facebook.com" target="_blank"><img src="../images/facebook.svg" alt="Facebook logo"></a>
-              <a href="https://youtube.com" target="_blank"><img src="../images/youtube.svg" alt="YouTube logo"></a>
-              <a href="https://instagram.com" target="_blank"><img src="../images/instagram.svg" alt="Instagram logo"></a>
-            </div>
-            </div>
-            <div class="footer__options" id="footer__options">
-              <label for="footer__element-menu">Select element to be modified:</label>
-              <select id="footer__element-menu" name="footer__element-menu">
-                
-              </select><br>
-              <label for="footer__font-select">Select font:</label>
-              <select id="footer__font-select" name="footer__font-select">
-          
-              </select><br>
-              <label id="footer__font-size-input-label" for="footer__font-size-slider">Select font size (16):</label>
-              <input id="footer__font-size-slider" name="footer__font-size-slider" type="range" min="8" max="24" value="16"><br>
-              <label for="footer__font-color-input">Select font color:</label>
-              <input id="footer__font-color-input" name="footer__font-color-input" type="color"><br>
-              <label for="footer__back-color-input">Select background color:</label>
-              <input id="footer__back-color-input" name="footer__back-color-input" type="color" value="#ffffff"><br>
-              <button id="footer__button" type="button">Apply changes</button>
-          </div>
-          </footer>
     </body>
 </html>
