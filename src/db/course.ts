@@ -1,4 +1,4 @@
-import { execute, fetchOne } from './index';
+import { execute, fetchAll, fetchOne } from './index';
 
 export type Course = {
     majorID: number;
@@ -16,6 +16,10 @@ export class CourseService {
 
     public static read(id: number): Promise<Course> {
         return fetchOne(`SELECT * FROM Courses WHERE id = ?`, [id]);
+    }
+
+    public static readAll(): Promise<Course[]> {
+        return fetchAll(`SELECT * FROM Courses`, []);
     }
 
     public static update(id: number, course: Course) {
