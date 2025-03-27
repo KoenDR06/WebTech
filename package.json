@@ -6,11 +6,12 @@
         "dotenv": "^16.4.7",
         "express": "^5.0.1",
         "express-handlebars": "^8.0.1",
-        "hbs": "^4.2.0",
+        "handlebars": "4.7.8",
         "http-errors": "~1.6.3",
         "jade": "^0.29.0",
         "morgan": "^1.10.0",
-        "sqlite3": "^5.1.7"
+        "sqlite3": "^5.1.7",
+        "pm2": "6.0.5"
     },
     "devDependencies": {
         "@types/cookie-parser": "^1.4.8",
@@ -25,6 +26,7 @@
         "typescript": "^5.8.2"
     },
     "scripts": {
+        "run": "pm2 start src/index.ts",
         "dev": "npx tsx --watch src/index.ts",
         "fmt": " prettier -w --config .prettierrc src"
     }
