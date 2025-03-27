@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use('/static', express.static('src/public'));
 
 // --- Routing ---
-app.use(process.env.BASE_ROUTE!, webRouter);
+app.use('/', webRouter);
 app.use((_, res) => {
     res.status(404).send('404 Not Found');
 });
