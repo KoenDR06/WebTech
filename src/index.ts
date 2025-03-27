@@ -7,7 +7,7 @@ import { webRouter } from './routing/web';
 
 dotenv.config();
 
-const port = process.env.PORT;
+const port = process.env.PORT!;
 const app = express();
 
 // --- Templating ---
@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use('/static', express.static('src/public'));
 
 // --- Routing ---
-app.use('/', webRouter);
+app.use(process.env.BASE_ROUTE!, webRouter);
 app.use((_, res) => {
     res.status(404).send('404 Not Found');
 });
