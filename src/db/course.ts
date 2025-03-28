@@ -24,12 +24,10 @@ export class CourseService {
     }
 
     public static update(id: number, course: Course) {
-        execute(`UPDATE Courses SET major_id = ?, name = ? code = ? WHERE id = ?`, [
-            course.majorID,
-            course.name,
-            course.code,
-            id,
-        ]);
+        execute(
+            `UPDATE Courses SET major_id = ?, name = ? code = ? WHERE id = ?`,
+            [course.majorID, course.name, course.code, id],
+        );
     }
 
     public static delete(id: number) {
