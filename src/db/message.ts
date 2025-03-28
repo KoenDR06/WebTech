@@ -1,4 +1,4 @@
-import { execute, fetchOne } from './index';
+import { execute, fetchOne, fetchAll } from './index';
 
 export type Message = {
     content: string;
@@ -23,6 +23,18 @@ export class MessageService {
 
     public static read(id: number): Promise<Message> {
         return fetchOne(`SELECT * FROM Messages WHERE id = ?`, [id]);
+    }
+
+    public static readUnopendAmount(id: number): Promise<Number> {
+        return fetchOne('SELECT COUNT(*) FROM Messages WHERE id = ? AND Opened = 0', [id]);
+    }
+
+    public static readTenMessages(id: number): Promise<Message[]> {
+        return fetchAll('SELECT * FROM Messages WHERE id = ? ORDER BY timestamp  LIMIT 10', [id])
+    }
+
+    public static readContent(id: number): Promise<String> {
+        return fetchOne('SELECT content FROM Messages WHERE id = ? ORDER BY timestamp  LIMIT 10', [id])
     }
 
     public static update(id: number, message: Message) {

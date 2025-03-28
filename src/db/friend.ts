@@ -1,4 +1,4 @@
-import { execute, fetchOne } from './index';
+import { execute, fetchAll, fetchOne } from './index';
 
 export type Friend = {
     userAID: number;
@@ -17,6 +17,14 @@ export class FriendService {
 
     public static read(id: number): Promise<Friend> {
         return fetchOne(`SELECT * FROM Friends WHERE id = ?`, [id]);
+    }
+
+    public static readAll(id: number): Promise<Friend[]> {
+        return fetchAll('SELECT * FROM Friends WHERE user_a_id = ? OR user_b_id = ?', [id]);
+    }
+
+    public static readRequests(id: number): Promise<Friend[]> {
+        return fetchAll('SELECT * FROM Friends WHERE user_a_id = ? OR user_b_id = ? AND accepted = 0', [id]);
     }
 
     public static update(id: number, friend: Friend) {

@@ -1,0 +1,26 @@
+<ul id="friends-list">
+    {{#friends}}
+        <li>{{name}} {{amoutUnopendMessages}}</li>
+    {{/friends}}
+</ul>
+
+<aside>
+    <ul id="friend-request-list">
+        {{#friendRequests}}
+            <li>{{name}} <button type="button" class="accept-button">Accept</button></li>
+        {{/friendRequests}}
+    </ul>
+</aside>
+
+<div id="messages-div">
+    <p>{{name}}</p>
+    <ul>
+        {{#messagesFriend}}
+            <li>
+                {{name}}
+                {{content}}
+            </li>
+        {{/messagesFriend}}
+    </ul>
+
+</div>

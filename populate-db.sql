@@ -44,6 +44,7 @@ CREATE TABLE Messages
     friend_id integer not null
         constraint friend_id
             references Friends (id)
+    opened    integer not null,
 );
 
 CREATE TABLE User_Courses
