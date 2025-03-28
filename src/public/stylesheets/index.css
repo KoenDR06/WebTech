@@ -33,7 +33,9 @@ h3 {
     font-size: 1.25rem;
 }
 
-.scrollable-table__content, .scrollable-table__content td, .scrollable-table__content th {
+.scrollable-table__content,
+.scrollable-table__content td,
+.scrollable-table__content th {
     border: 1px solid black;
 }
 
@@ -81,13 +83,12 @@ h3 {
     font-size: 1rem;
 }
 
-
 /* register */
 
-#form__entered-hobbies > p, #form__entered-courses > p {
+#form__entered-hobbies > p,
+#form__entered-courses > p {
     margin: 0;
 }
-
 
 /* header */
 
@@ -109,7 +110,7 @@ header > p {
 
 .header__picture {
     max-height: 49px;
-    width:auto;
+    width: auto;
 }
 
 #header__log-in {
@@ -125,7 +126,6 @@ header > p {
     transition: background-color 0.2s ease-in;
     padding: 5px;
 }
-
 
 /* nav */
 
@@ -165,7 +165,6 @@ nav {
     background-color: rgb(0, 140, 255);
 }
 
-
 /* footer */
 
 footer {
@@ -195,7 +194,8 @@ footer {
     top: 5px;
 }
 
-footer select, footer input {
+footer select,
+footer input {
     width: 15%;
     height: 1.5rem;
     font-size: 1rem;
@@ -205,7 +205,6 @@ footer button {
     width: 25%;
     font-size: 1rem;
 }
-
 
 @media only screen and (min-width: 450px) {
     nav {
@@ -225,7 +224,9 @@ footer button {
         padding-right: 15%;
     }
 
-    html { font-size: 24px; }
+    html {
+        font-size: 24px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -234,9 +235,10 @@ footer button {
         padding-right: 20%;
     }
 
-    html { font-size: 16px; }
+    html {
+        font-size: 16px;
+    }
 }
-
 
 @media only screen and (min-width: 1200px) and (min-height: 500px) {
     .main-content {

@@ -3,14 +3,15 @@ import { execute, fetchAll, fetchOne } from './index';
 export type Course = {
     majorID: number;
     name: string;
+    code: string;
 };
 
 export class CourseService {
     public static create(course: Course) {
         execute(
-            `INSERT INTO Courses(name, major_id)
-                 VALUES (?, ?)`,
-            [course.majorID, course.name],
+            `INSERT INTO Courses(name, major_id, code)
+                 VALUES (?, ?, ?)`,
+            [course.majorID, course.name, course.code],
         );
     }
 
@@ -23,9 +24,10 @@ export class CourseService {
     }
 
     public static update(id: number, course: Course) {
-        execute(`UPDATE Courses SET major_id = ?, name = ? WHERE id = ?`, [
+        execute(`UPDATE Courses SET major_id = ?, name = ? code = ? WHERE id = ?`, [
             course.majorID,
             course.name,
+            course.code,
             id,
         ]);
     }

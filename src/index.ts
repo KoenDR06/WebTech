@@ -3,7 +3,8 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import * as dotenv from 'dotenv';
 import hbs from 'express-handlebars';
-import { webRouter } from './routing/web';
+import { webRouter, apiRouter } from './routing';
+import bodyParser from 'body-parser';
 
 dotenv.config();
 
@@ -20,12 +21,14 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/static', express.static('src/public'));
 
 // --- Routing ---
 app.use('/', webRouter);
+app.use('/api', apiRouter);
 app.use((_, res) => {
-    res.status(404).send('404 Not Found');
+    res.status(404).render('404 Not Found');
 });
 
 // --- Error Handler ---
