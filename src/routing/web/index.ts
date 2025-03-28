@@ -7,7 +7,9 @@ import { UserService } from '../../db/user';
 export const webRouter = express.Router();
 
 webRouter.get('/register', async (req: Request, res: Response) => {
-    res.render('register', { title: 'Register' });
+    const courses = await CourseService.readAll();
+
+    res.render('register', { title: 'Register', courses: courses });
 });
 
 webRouter.get('/login', async (req: Request, res: Response) => {
@@ -15,7 +17,7 @@ webRouter.get('/login', async (req: Request, res: Response) => {
 });
 
 webRouter.get('/courses', async (req: Request, res: Response) => {
-    const courses = await CourseService.readAll()
+    const courses = await CourseService.readAll();
 
     res.render('courses', { title: 'Courses', courses: courses });
 });

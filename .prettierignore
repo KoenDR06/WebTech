@@ -1,1 +1,1 @@
-*.handlebars
+src/views/layouts/main.hbs

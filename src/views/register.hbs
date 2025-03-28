@@ -1,46 +1,112 @@
-<form>
-    <label for='firstname'>First name:</label><br />
-    <input type='text' name='firstname' /><br />
+<form
+    name='registerForm'
+    id='register-form'
+    method='post'
+    enctype='multipart/form-data'
+    action='api/user'
+>
+    <label for='first-name'>First name:</label><br />
+    <input type='text' name='firstName' id='first-name' required /><br />
 
-    <label for='infixname'>Infix:</label><br />
-    <input type='text' name='infixname' /><br />
-
-    <label for='lastname'>Last name:</label><br />
-    <input type='text' name='lastname' /><br />
+    <label for='last-name'>Last name:</label><br />
+    <input type='text' name='lastName' id='last-name' required /><br />
 
     <label for='birthday'>Date of birth:</label><br />
-    <input type='date' name='birthday' /><br />
+    <input type='date' name='birthday' id='birthday' required /><br />
 
     <label for='email'>E-mail: </label><br />
-    <input type='email' name='email' /><br />
+    <input type='email' name='email' id='email' required /><br />
 
-    <label for='profilepicture'>Profile picture:</label><br />
-    <input type='image' name='profilepicture' /><br />
+    <label for='profile-picture'>Profile picture:</label><br />
+    <input
+        type='file'
+        accept='image/png, image/jpeg'
+        name='profilePicture'
+        id='profile-picture'
+    /><br />
 
-    <label for='programmajor'>Program/ major:</label><br />
-    <input type='text' name='programmajor' /><br />
+    <label for='major'>Program/ major:</label><br />
+    <input type='text' name='major' id='major' required /><br />
 
-    <!-- list of hobbies, not text -->
-    <label for='hobbies'>Hobbies:</label><br />
-    <input type='text' name='hobbies' /><br />
+    {{!    <label for='hobbies'>Hobbies:</label><br />}}
+    {{!    <input type='text' name='hobbies' id='hobbies' /><br />}}
 
-    <!-- list of courses, not text -->
-    <label for='courses'>Taken courses:</label><br />
-    <input type='text' name='courses' /><br />
-
-    <!-- password -->
-    <label for='password'>Password:</label><br />
-    <input type='password' name='password' /><br />
-
-    <label for='confirmpassword'>Confirm password:</label><br />
-    <input type='password' name='confirmpassword' /><br />
+    <p>Courses:</p>
+    {{#courses}}
+        <input type='checkbox' name='{{name}}' id='course-{{code}}' />
+        <label for='course-{{code}}'>{{name}}</label>
+        <br />
+    {{/courses}}
     <br />
 
-    <input type='submit' value='Register' />
+    <label for='password'>Password:</label><br />
+    <input type='password' name='password' id='password' required /><br />
+
+    <label for='confirm-password'>Confirm password:</label><br />
+    <input
+        type='password'
+        name='confirmPassword'
+        id='confirm-password'
+        required
+    /><br />
+    <br />
+
+    <input type='submit' value='Register' id='submit-button' />
 
     <input
         type='button'
-        value='Back'
-        onclick="window.location.href='login.html';"
+        value='I already have an account'
+        onclick="window.location.href='login';"
     />
 </form>
+
+<script>
+    console.log('register.js'); const firstName =
+    document.querySelector('#first-name'); const lastName =
+    document.querySelector('#last-name'); const birthday =
+    document.querySelector('#birthday'); const email =
+    document.querySelector('#email'); const photo =
+    document.querySelector('#profile-picture'); const major =
+    document.querySelector('#major'); // const enteredHobbies =
+    document.querySelector('#hobbies'); // const inputHobby =
+    document.querySelector('#form__hobby'); // const enterHobby =
+    document.querySelector('#form__enter-hobby'); //
+    enterHobby.addEventListener('click', () => { // const newEntry =
+    document.createElement('p'); // const newEntryText =
+    document.createTextNode(inputHobby.value); //
+    newEntry.appendChild(newEntryText); // const newEntryButton =
+    document.createElement('button'); // const newEntryButtonText =
+    document.createTextNode('Delete'); //
+    newEntryButton.appendChild(newEntryButtonText); // inputHobby.value = ''; //
+    enteredHobbies.addEventListener('click', function () { // newEntry.remove();
+    // }); // enteredHobbies.appendChild(newEntry); //
+    enteredHobbies.appendChild(newEntryButton); // });
+
+    {{#courses}}
+        const course_{{code}}_input = document.querySelector('#course-{{code}}')
+        console.log(course_{{code}}_input.checked);
+    {{/courses}}
+
+    const password = document.querySelector('#password'); const confirmPassword
+    = document.querySelector('#confirm-password'); // Taken from: //
+    https://stackoverflow.com/questions/23593052/format-javascript-date-as-yyyy-mm-dd
+    function formatDate(date) { var d = new Date(date), month = '' +
+    (d.getMonth() + 1), day = '' + d.getDate(), year = d.getFullYear(); if
+    (month.length < 2) month = '0' + month; if (day.length < 2) day = '0' + day;
+    return [year, month, day].join('-'); } // Taken from: //
+    https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
+    function validateEmail(email) { return String(email) .toLowerCase() .match(
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    ); } function validate(e) { e.preventDefault(); console.log(e);
+    console.log(birthday.value); const now = new Date(); todaysDate =
+    formatDate(now); console.log(todaysDate); if
+    (todaysDate.localeCompare(birthday.value) === -1) { alert('Birthday can not
+    be in the future.'); e.preventDefault(); return false; } if
+    (!validateEmail(email.value)) { alert('Invalid email.'); return false; } if
+    (password.value.length < 8) { alert('Weak password'); return false; } if
+    (password.value !== confirmPassword.value) { alert('Passwords do not
+    match.'); return false; } return false; } console.log("making event
+    listener")
+    document.querySelector('#register-form').addEventListener('submit',
+    validate);
+</script>
